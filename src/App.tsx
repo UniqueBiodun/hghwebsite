@@ -2,10 +2,24 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import HeroSection from "./views/hero/hero-section";
 import ScrollToTop from "./helper/ScrollToTop";
+import Navbar from "./views/containers/navbar/navbar";
+import Footer from "./views/containers/footer/footer";
 // import { Route, Routes } from "react-router-dom";
 
-function App() {
+function App({}) {
 	const [newdata, setNewdata] = useState<any>();
+
+	const [receivedData, setReceivedData] = useState("");
+	const [isOpen, setIsOpen] = useState(false);
+
+	const handleDataFromChild = (data: any) => {
+		setReceivedData(data);
+	};
+
+	const toggleSidebar = () => {
+		console.log(receivedData);
+		setIsOpen(!isOpen);
+	};
 
 	const fetchEvents = async () => {
 		try {
@@ -24,20 +38,21 @@ function App() {
 		fetchEvents();
 	}, []);
 
-	// useEffect(() => {
-	// 	// Initial API call
-	// 	fetchMathFact();
-
-	// 	// Schedule the API call to happen every 10 seconds
-	// 	const intervalId = setInterval(fetchMathFact, 5000);
-
-	// 	// Clean up the interval when the component is unmounted
-	// 	return () => clearInterval(intervalId);
-	// }, []);
-
 	return (
 		<>
 			<ScrollToTop />
+			<Navbar
+				isOpen={isOpen}
+				toggleSidebar={toggleSidebar}
+				sendDataToParent={handleDataFromChild}
+			/>
+
+			{isOpen && (
+				<div
+					className="fixed z-10 top-0 left-0 w-full h-full bg-black opacity-50"
+					onClick={toggleSidebar}
+				></div>
+			)}
 			<HeroSection />
 			<div className="min-h-screen flex flex-col justify-center items-center">
 				<div>
@@ -52,6 +67,7 @@ function App() {
 						))}
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }

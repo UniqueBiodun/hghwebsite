@@ -13,7 +13,21 @@ module.exports = withMT({
 			"2xl": "1440px",
 			"3xl": "1441px",
 		},
-		extend: {},
+		extend: {
+			colors: {
+				primary: "#530E25",
+			},
+		},
+		container: {
+			padding: {
+				DEFAULT: "1rem",
+				sm: "2rem",
+				lg: "2rem",
+				xl: "2rem",
+				"2xl": "5rem",
+			},
+			center: true,
+		},
 	},
 	plugins: [],
 });

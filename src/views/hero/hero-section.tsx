@@ -1,32 +1,8 @@
-import React, { useState } from "react";
-import Navbar from "../containers/navbar";
-import { IconButton } from "@material-tailwind/react";
+import React from "react";
 
 const HeroSection: React.FC = () => {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const toggleSidebar = () => {
-		setIsOpen(!isOpen);
-	};
-
 	return (
 		<div className="relative h-screen">
-			<Navbar sidebarToggler={toggleSidebar} />
-			<div
-				className={`z-20 fixed top-0 right-0 h-screen w-full sm:w-[40%] md:w-[35%] lg:w-1/4 bg-gray-800 text-white transition-transform duration-300 transform ${
-					isOpen ? "translate-x-0" : "translate-x-full"
-				}`}
-			>
-				<span className="absolute top-4 right-4" onClick={toggleSidebar}>
-					<IconButton
-						variant="text"
-						className="text-white rounded-full text-3xl"
-					>
-						<i className="fas fa-close" />
-					</IconButton>
-				</span>
-				<div className="p-4">{/* Sidebar content goes here */}</div>
-			</div>
 			<video
 				autoPlay
 				muted

@@ -163,12 +163,19 @@ import React, { useState } from "react";
 import HGHLOGO from "../../../assets/icons/hghburglogo.svg";
 import Menu from "../../../assets/icons/menu-burg.svg";
 import { Link } from "react-router-dom";
+import { IconButton } from "@material-tailwind/react";
 
-interface SidebarProps {
-	sidebarToggler: () => void;
+interface NavbarProps {
+	isOpen: boolean;
+	toggleSidebar: () => void;
+	sendDataToParent: (data: string) => void;
 }
 
-const Navbar: React.FC<SidebarProps> = ({ sidebarToggler }) => {
+const Navbar: React.FC<NavbarProps> = ({
+	isOpen,
+	toggleSidebar,
+	sendDataToParent,
+}) => {
 	const [color, setColor] = useState(false);
 
 	const changeColor = () => {
@@ -177,22 +184,44 @@ const Navbar: React.FC<SidebarProps> = ({ sidebarToggler }) => {
 
 	window.addEventListener("scroll", changeColor);
 
+	const sendAndToggle = () => {
+		sendDataToParent("Sidebar");
+		toggleSidebar();
+	};
+
 	return (
 		<>
-			<nav
-				className={`flex justify-between fixed top-0 right-0 left-0 z-10 px-5 sm:px-20 py-3 ${
+			<span
+				className={`py-3 fixed top-0 right-0 left-0 z-10 ${
 					color ? "bg-red-400" : "bg-transparent backdrop-filter-none"
 				}`}
 			>
-				<div className="cursor-pointer">
-					<Link to="/">
-						<img src={HGHLOGO} alt="hgh-logo" />
-					</Link>
-				</div>
-				<div onClick={sidebarToggler} className="cursor-pointer">
-					<img src={Menu} alt="menu-icon" />
-				</div>
-			</nav>
+				<nav className={` container flex justify-between `}>
+					<div className="cursor-pointer">
+						<Link to="/">
+							<img src={HGHLOGO} alt="hgh-logo" />
+						</Link>
+					</div>
+					<div onClick={sendAndToggle} className="cursor-pointer">
+						<img src={Menu} alt="menu-icon" />
+					</div>
+				</nav>
+			</span>
+			<div
+				className={`z-20 fixed top-0 right-0 h-screen w-full sm:w-[40%] md:w-[35%] lg:w-1/4 bg-gray-800 text-white transition-transform duration-300 transform ${
+					isOpen ? "translate-x-0" : "translate-x-full"
+				}`}
+			>
+				<span className="absolute top-4 right-4" onClick={toggleSidebar}>
+					<IconButton
+						variant="text"
+						className="text-white rounded-full text-3xl"
+					>
+						<i className="fas fa-close" />
+					</IconButton>
+				</span>
+				<div className="p-4">{/* Sidebar content goes here */}</div>
+			</div>
 		</>
 	);
 };

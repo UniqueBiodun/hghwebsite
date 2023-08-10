@@ -158,3 +158,43 @@
 // 		</div>
 // 	);
 // }
+
+import React, { useState } from "react";
+import HGHLOGO from "../../../assets/icons/hghburglogo.svg";
+import Menu from "../../../assets/icons/menu-burg.svg";
+import { Link } from "react-router-dom";
+
+interface SidebarProps {
+	sidebarToggler: () => void;
+}
+
+const Navbar: React.FC<SidebarProps> = ({ sidebarToggler }) => {
+	const [color, setColor] = useState(false);
+
+	const changeColor = () => {
+		window.scrollY >= 100 ? setColor(true) : setColor(false);
+	};
+
+	window.addEventListener("scroll", changeColor);
+
+	return (
+		<>
+			<nav
+				className={`flex justify-between fixed top-0 right-0 left-0 z-10 px-5 sm:px-20 py-3 ${
+					color ? "bg-red-400" : "bg-transparent backdrop-filter-none"
+				}`}
+			>
+				<div className="cursor-pointer">
+					<Link to="/">
+						<img src={HGHLOGO} alt="hgh-logo" />
+					</Link>
+				</div>
+				<div onClick={sidebarToggler} className="cursor-pointer">
+					<img src={Menu} alt="menu-icon" />
+				</div>
+			</nav>
+		</>
+	);
+};
+
+export default Navbar;

@@ -1,23 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import HeroSection from "./views/hero/hero-section";
-// import { StickyNavbar } from "./views/navbar";
+import ScrollToTop from "./helper/ScrollToTop";
+// import { Route, Routes } from "react-router-dom";
 
 function App() {
-	const [math, setMath] = useState<any>();
 	const [newdata, setNewdata] = useState<any>();
 
-	const fetchMathFact = async () => {
-		try {
-			const response = await axios.get("http://numbersapi.com/random/math");
-			const data = response.data;
-			setMath(data);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-
-	const newApi = async () => {
+	const fetchEvents = async () => {
 		try {
 			const response = await axios.get(
 				"https://admin.hisgreathouse.org/api/events"
@@ -31,31 +21,25 @@ function App() {
 	};
 
 	useEffect(() => {
-		newApi();
+		fetchEvents();
 	}, []);
 
-	useEffect(() => {
-		// Initial API call
-		fetchMathFact();
+	// useEffect(() => {
+	// 	// Initial API call
+	// 	fetchMathFact();
 
-		// Schedule the API call to happen every 10 seconds
-		const intervalId = setInterval(fetchMathFact, 5000);
+	// 	// Schedule the API call to happen every 10 seconds
+	// 	const intervalId = setInterval(fetchMathFact, 5000);
 
-		// Clean up the interval when the component is unmounted
-		return () => clearInterval(intervalId);
-	}, []);
+	// 	// Clean up the interval when the component is unmounted
+	// 	return () => clearInterval(intervalId);
+	// }, []);
 
 	return (
 		<>
-			{/* <StickyNavbar /> */}
+			<ScrollToTop />
 			<HeroSection />
 			<div className="min-h-screen flex flex-col justify-center items-center">
-				<div>
-					<p className="text-2xl font-bold text-blue-600">
-						Here comes the math facts
-					</p>
-					<p>{math}</p>
-				</div>
 				<div>
 					<p className="mt-16 text-2xl font-bold text-blue-600">
 						Program details

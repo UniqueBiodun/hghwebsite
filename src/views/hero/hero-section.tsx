@@ -1,4 +1,5 @@
 import React from "react";
+import "../../animations.css";
 
 const HeroSection: React.FC = () => {
 	return (
@@ -18,7 +19,7 @@ const HeroSection: React.FC = () => {
 				<h1 className="text-4xl sm:text-6xl w-[80%] sm:w-[80%] font-bold mb-4">
 					HERO SECTION HEADER
 				</h1>
-				<p className="text-lg w-[70%] sm:w-[50%]">
+				<p className="text-lg w-[70%] sm:w-[50%] animate-pulse">
 					Assistive text Lorem ipsum dolor sit amet consectetur adipisicing
 					elit. Quae, at iusto? Ab expedita blanditiis magnam!
 				</p>

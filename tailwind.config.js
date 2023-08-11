@@ -32,6 +32,11 @@ module.exports = withMT({
 			},
 			center: true,
 		},
+		backgroundImage: {
+			lquote: "url('/src/assets/icons/left-quote.svg')",
+			rquote: "url('/src/assets/icons/right-quote.svg')",
+			"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+		},
 	},
 	plugins: [],
 });

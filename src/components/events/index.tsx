@@ -25,7 +25,9 @@ const EventCard: React.FC<EventProps> = ({
 				<div
 					className={`container flex justify-center ${columns} gap-10 md:gap-16 lg:gap-20`}
 				>
-					<div className={`lg:w-[50%] w-full ${placement}`}>
+					<div
+						className={`lg:w-[50%] w-full ${placement} animate-fade-in-slide-right`}
+					>
 						<div className="">
 							<div
 								className={`w-full md:w-[336px] flex flex-col gap-6 md:gap-12 ${borderPosition} border-[#E1E1E1]`}
@@ -79,7 +81,7 @@ const EventCard: React.FC<EventProps> = ({
 								key={index}
 								src={event.image}
 								alt={`Image ${index}`}
-								className={`h-[540px] w-full ${
+								className={`rounded-xl h-[540px] w-full ${
 									index === activeIndex ? "block" : "hidden"
 								}`}
 							/>

@@ -161,7 +161,9 @@
 
 import React, { useState } from "react";
 import HGHLOGO from "../../../assets/icons/hghburglogo.svg";
+import HGHLOGOWhite from "../../../assets/icons/hghwhitelogo.svg";
 import Menu from "../../../assets/icons/menu-burg.svg";
+import MenuWhite from "../../../assets/icons/menu-white.svg";
 import { Link } from "react-router-dom";
 import { IconButton } from "@material-tailwind/react";
 
@@ -193,17 +195,25 @@ const Navbar: React.FC<NavbarProps> = ({
 		<>
 			<span
 				className={`py-3 fixed top-0 right-0 left-0 z-10 ${
-					color ? "bg-red-400" : "bg-transparent backdrop-filter-none"
+					color ? "bg-primary" : "bg-transparent backdrop-filter-none"
 				}`}
 			>
 				<nav className={` container flex justify-between `}>
 					<div className="cursor-pointer">
 						<Link to="/">
-							<img src={HGHLOGO} alt="hgh-logo" />
+							{color ? (
+								<img src={HGHLOGOWhite} alt="hgh-logo" />
+							) : (
+								<img src={HGHLOGO} alt="hgh-logo" />
+							)}
 						</Link>
 					</div>
 					<div onClick={sendAndToggle} className="cursor-pointer">
-						<img src={Menu} alt="menu-icon" />
+						{color ? (
+							<img src={MenuWhite} alt="menu-icon" />
+						) : (
+							<img src={Menu} alt="menu-icon" />
+						)}
 					</div>
 				</nav>
 			</span>

@@ -1,14 +1,11 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import HeroSection from "./views/hero/hero-section";
+import { useState } from "react";
 import ScrollToTop from "./helper/ScrollToTop";
 import Navbar from "./views/containers/navbar/navbar";
 import Footer from "./views/containers/footer/footer";
-// import { Route, Routes } from "react-router-dom";
+import Home from "./views/home";
+import { Route, Routes } from "react-router-dom";
 
 function App({}) {
-	const [newdata, setNewdata] = useState<any>();
-
 	const [receivedData, setReceivedData] = useState("");
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -20,23 +17,6 @@ function App({}) {
 		console.log(receivedData);
 		setIsOpen(!isOpen);
 	};
-
-	const fetchEvents = async () => {
-		try {
-			const response = await axios.get(
-				"https://admin.hisgreathouse.org/api/events"
-			);
-			const data = response.data;
-			console.log(data);
-			setNewdata(data);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-
-	useEffect(() => {
-		fetchEvents();
-	}, []);
 
 	return (
 		<>
@@ -53,20 +33,10 @@ function App({}) {
 					onClick={toggleSidebar}
 				></div>
 			)}
-			<HeroSection />
-			<div className="min-h-screen flex flex-col justify-center items-center">
-				<div>
-					<p className="mt-16 text-2xl font-bold text-blue-600">
-						Program details
-					</p>
-					{newdata &&
-						newdata.map((item: any, index: number) => (
-							<>
-								<p key={index}>{item?.title}</p>
-							</>
-						))}
-				</div>
-			</div>
+			<Routes>
+				<Route path="/" element={<Home />} />
+			</Routes>
+
 			<Footer />
 		</>
 	);

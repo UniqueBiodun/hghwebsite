@@ -62,7 +62,7 @@ const EventsGallery: React.FC = () => {
 									<Link
 										target="_blank"
 										to="https://linktr.ee/hisgreathouse"
-										className="flex gap-2 justify-center items-center cursor-pointer"
+										className="flex gap-2 justify-center items-center"
 									>
 										<img src={Headset} alt="headset" />
 										<span className="underline text-xl font-medium">
@@ -111,7 +111,7 @@ const EventsGallery: React.FC = () => {
 								<div>
 									<Link
 										to=""
-										className="flex gap-2 justify-center items-center cursor-pointer"
+										className="flex gap-2 justify-center items-center"
 									>
 										<img src={Headset} alt="headset" />
 										<span className="underline text-xl font-medium">

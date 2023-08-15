@@ -16,11 +16,11 @@ const Footer: React.FC = () => {
 
 					<div className="flex flex-col gap-4">
 						<p>talktous@hisgreathouse.org</p>
-						<p>+2348101234567</p>
+						<p>+2348137600645</p>
 					</div>
 					<div>
 						<p>
-							5/7 Emmanuel street, Elomaz hotel, Maryland, Ikeja, Lagos,
+							3/5 Emmanuel street, Elomaz hotel, Maryland, Ikeja, Lagos,
 							Nigeria.
 						</p>
 					</div>

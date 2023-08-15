@@ -1,14 +1,29 @@
 import React from "react";
 import "../../animations.css";
+import { Button } from "@material-tailwind/react";
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+	scrollRef: React.RefObject<HTMLDivElement>;
+}
+const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
+	const scrollToNextSectionWithDelay = () => {
+		if (scrollRef.current) {
+			setTimeout(() => {
+				scrollRef.current?.scrollIntoView({
+					behavior: "smooth",
+					block: "center",
+				});
+			}, 200); // Set the delay in milliseconds (e.g., 1000 ms = 1 second)
+		}
+	};
+
 	return (
 		<div className="relative h-screen">
 			<video
 				autoPlay
 				muted
 				loop
-				className="w-full h-screen object-cover object-center absolute z-0"
+				className="w-full h-screen object-cover object-center absolute"
 			>
 				<source
 					src="https://res.cloudinary.com/ddypwf3iu/video/upload/v1691609928/HGH%20Website%20Assets/Videos/5_Second_Countdown_Intro_video_YouTube_j1l5io.mp4"
@@ -23,6 +38,13 @@ const HeroSection: React.FC = () => {
 					Assistive text Lorem ipsum dolor sit amet consectetur adipisicing
 					elit. Quae, at iusto? Ab expedita blanditiis magnam!
 				</p>
+				<Button
+					onClick={scrollToNextSectionWithDelay}
+					variant="outlined"
+					className="capitalize text-lg font-medium mt-12 outline-0 border-black"
+				>
+					Join the flow
+				</Button>
 			</div>
 		</div>
 	);

@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroSection from "../hero/hero-section";
-import UpcomingEvents from "./upcoming-events";
-import BibleTeaching from "./bible-teachings";
-import Testimony from "../testimony/testimony";
+import MeetOurPastor from "./meet-our-pastor";
+import EventsGallery from "./events-gallery";
+import ContactMap from "./contact-map";
 
 const Home: React.FC = () => {
+	const meetOurPastorRef = useRef<HTMLDivElement | null>(null);
+
 	return (
 		<>
-			<HeroSection />
-			<UpcomingEvents />
-			<BibleTeaching />
-			<Testimony />
+			<HeroSection scrollRef={meetOurPastorRef} />
+			<MeetOurPastor refProp={meetOurPastorRef} />
+			<EventsGallery />
+			<ContactMap />
 		</>
 	);
 };

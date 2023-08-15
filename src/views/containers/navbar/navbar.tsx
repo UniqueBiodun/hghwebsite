@@ -194,7 +194,7 @@ const Navbar: React.FC<NavbarProps> = ({
 	return (
 		<>
 			<span
-				className={`py-3 fixed top-0 right-0 left-0 z-10 ${
+				className={`py-3 fixed top-0 right-0 left-0 z-30 ${
 					color ? "bg-primary" : "bg-transparent backdrop-filter-none"
 				}`}
 			>
@@ -218,7 +218,7 @@ const Navbar: React.FC<NavbarProps> = ({
 				</nav>
 			</span>
 			<div
-				className={`z-20 fixed top-0 right-0 h-screen w-full sm:w-[40%] md:w-[35%] lg:w-1/4 bg-gray-800 text-white transition-transform duration-300 transform ${
+				className={`z-50 fixed top-0 right-0 h-screen w-full sm:w-[40%] md:w-[35%] lg:w-1/4 bg-gray-800 text-white transition-transform duration-300 transform ${
 					isOpen ? "translate-x-0" : "translate-x-full"
 				}`}
 			>

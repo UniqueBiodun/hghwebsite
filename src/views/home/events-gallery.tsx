@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Carousel, IconButton } from "@material-tailwind/react";
 import Headset from "../../assets/icons/headset-mic.svg";
 import { Link } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const EventsGallery: React.FC = () => {
+	const [ref, inView] = useInView({
+		threshold: 0.2, // Percentage of element visible to trigger
+	});
+
+	const animation = useAnimation();
+
+	useEffect(() => {
+		if (inView) {
+			animation.start({
+				y: 0,
+				opacity: 1,
+				transition: {
+					type: "spring",
+					duration: 2,
+				},
+			});
+		}
+		if (!inView) {
+			animation.start({
+				y: "-5vh",
+				opacity: 0,
+			});
+		}
+	}, [inView]);
+
 	return (
 		<>
 			<section className="bg-white min-h-[calc(100vh-100px)] text-sec-200 py-[60px]">
-				<div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
+				<div
+					ref={ref}
+					className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4"
+				>
 					<div className="h-full w-full relative overflow-hidden">
 						<div className="shadow-md transform -rotate-45 z-10 w-[350px] text-center text-white text-xl py-2 absolute top-[50px] -left-[100px] bg-black opacity-[0.8]">
 							<p>Upcoming event</p>
@@ -56,7 +86,11 @@ const EventsGallery: React.FC = () => {
 					</div>
 
 					<div className="flex flex-col gap-4 h-full w-full">
-						<div className="h-[40vh] w-full relative">
+						<motion.div
+							initial={{ y: "-100vh", opacity: 0 }}
+							animate={animation}
+							className="h-[40vh] w-full relative"
+						>
 							<div className="w-full rounded-b-xl text-center text-white text-xl py-4 absolute bottom-0 right-0 left-0 bg-black opacity-[0.7]">
 								<div>
 									<Link
@@ -76,7 +110,7 @@ const EventsGallery: React.FC = () => {
 								alt="image 1"
 								className="rounded-xl h-full w-full object-cover"
 							/>
-						</div>
+						</motion.div>
 						<div className="h-[40vh] w-full relative">
 							<Carousel
 								autoplay

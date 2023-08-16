@@ -1,18 +1,67 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface MeetOurPastorProps {
 	refProp: React.RefObject<HTMLDivElement>;
 }
 
 const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
+	const [ref, inView] = useInView({
+		threshold: 0.2, // Percentage of element visible to trigger
+	});
+
+	const leftAnimation = useAnimation();
+	const rightAnimation = useAnimation();
+
+	useEffect(() => {
+		if (inView) {
+			leftAnimation.start({
+				x: 0,
+				opacity: 1,
+				transition: {
+					type: "spring",
+					duration: 2,
+					bounce: 0.1,
+				},
+			});
+
+			rightAnimation.start({
+				x: 0,
+				opacity: 1,
+				transition: {
+					type: "spring",
+					duration: 2,
+					bounce: 0.1,
+				},
+			});
+		}
+		if (!inView) {
+			leftAnimation.start({
+				x: "-100vw",
+			});
+
+			rightAnimation.start({
+				x: "100vw",
+			});
+		}
+	}, [inView, leftAnimation, rightAnimation]);
+
 	return (
 		<>
 			<section
 				ref={refProp}
 				className="bg-[#F9F9F9] min-h-[80vh] text-sec-400 py-[60px]"
 			>
-				<div className="container mx-auto grid gap-4 lg:grid-cols-2 grid-cols-1">
-					<div className="w-full h-full text-center">
+				<div
+					ref={ref}
+					className="container mx-auto grid gap-4 lg:grid-cols-2 grid-cols-1"
+				>
+					<motion.div
+						initial={{ x: "-100vw", opacity: 0 }}
+						animate={leftAnimation}
+						className="w-full h-full text-center"
+					>
 						<h3 className="text-2xl font-semibold text-sec-100 pb-4">
 							Meet Our Lead Pastor
 						</h3>
@@ -41,8 +90,12 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 							perferendis totam quas similique laboriosam molestiae enim
 							incidunt quo ullam quos aliquid vitae dolore dignissimos illo?
 						</p>
-					</div>
-					<div className="w-full h-full relative">
+					</motion.div>
+					<motion.div
+						initial={{ x: "100vw", opacity: 0 }}
+						animate={rightAnimation}
+						className="w-full h-full relative"
+					>
 						<div className="w-full text-center text-white text-xl py-5 absolute bottom-5 md:bottom-10 right-0 left-0 bg-black opacity-[0.7]">
 							<p>Pastor Olufemi Ibitoye</p>
 						</div>
@@ -51,7 +104,7 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774726/samples/look-up.jpg"
 							alt="lead-pastor"
 						/>
-					</div>
+					</motion.div>
 				</div>
 			</section>
 		</>

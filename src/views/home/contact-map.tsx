@@ -97,15 +97,9 @@ const ContactMap: React.FC = () => {
 						<iframe
 							width="100%"
 							height="400"
-							frameBorder="0"
-							scrolling="no"
 							className="rounded-xl"
 							src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Elomaz%20Hotel%203/5%20Emmanuel%20Street,%20Maryland%20Lagos+(His%20Great%20House)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-						>
-							<a href="https://www.maps.ie/population/">
-								Population Estimator map
-							</a>
-						</iframe>
+						></iframe>
 					</div>
 				</div>
 			</section>

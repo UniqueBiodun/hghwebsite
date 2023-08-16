@@ -11,41 +11,31 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 		threshold: 0.2, // Percentage of element visible to trigger
 	});
 
-	const leftAnimation = useAnimation();
-	const rightAnimation = useAnimation();
+	const animation = useAnimation();
 
 	useEffect(() => {
 		if (inView) {
-			leftAnimation.start({
-				x: 0,
+			animation.start({
+				y: 0,
 				opacity: 1,
 				transition: {
 					type: "spring",
-					duration: 2,
-					bounce: 0.1,
-				},
-			});
-
-			rightAnimation.start({
-				x: 0,
-				opacity: 1,
-				transition: {
-					type: "spring",
-					duration: 2,
-					bounce: 0.1,
+					duration: 4,
+					bounce: 0.2,
 				},
 			});
 		}
 		if (!inView) {
-			leftAnimation.start({
-				x: "-100vw",
-			});
-
-			rightAnimation.start({
-				x: "100vw",
+			animation.start({
+				y: "10vh",
+				opacity: 0,
+				transition: {
+					type: "tween",
+					duration: 5,
+				},
 			});
 		}
-	}, [inView, leftAnimation, rightAnimation]);
+	}, [inView]);
 
 	return (
 		<>
@@ -58,8 +48,8 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 					className="container mx-auto grid gap-4 lg:grid-cols-2 grid-cols-1"
 				>
 					<motion.div
-						initial={{ x: "-100vw", opacity: 0 }}
-						animate={leftAnimation}
+						initial={{ y: "-10vh", opacity: 0 }}
+						animate={animation}
 						className="w-full h-full text-center"
 					>
 						<h3 className="text-2xl font-semibold text-sec-100 pb-4">
@@ -91,16 +81,12 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 							incidunt quo ullam quos aliquid vitae dolore dignissimos illo?
 						</p>
 					</motion.div>
-					<motion.div
-						initial={{ x: "100vw", opacity: 0 }}
-						animate={rightAnimation}
-						className="w-full h-full relative"
-					>
+					<motion.div animate={animation} className="w-full h-full relative">
 						<div className="w-full text-center text-white text-xl py-5 absolute bottom-5 md:bottom-10 right-0 left-0 bg-black opacity-[0.7]">
 							<p>Pastor Olufemi Ibitoye</p>
 						</div>
 						<img
-							className="rounded-xl h-full"
+							className="rounded-xl h-full w-full object-cover"
 							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774726/samples/look-up.jpg"
 							alt="lead-pastor"
 						/>

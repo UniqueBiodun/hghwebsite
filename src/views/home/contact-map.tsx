@@ -89,7 +89,7 @@ const ContactMap: React.FC = () => {
 							<img
 								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774723/samples/two-ladies.jpg"
 								alt="contact-image"
-								className="h-full w-full rounded-xl"
+								className="h-full w-full object-cover rounded-xl"
 							/>
 						</div>
 					</div>

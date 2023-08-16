@@ -89,7 +89,7 @@ const ContactMap: React.FC = () => {
 							<img
 								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774723/samples/two-ladies.jpg"
 								alt="contact-image"
-								className="h-full w-full"
+								className="h-full w-full rounded-xl"
 							/>
 						</div>
 					</div>
@@ -99,6 +99,7 @@ const ContactMap: React.FC = () => {
 							height="400"
 							frameBorder="0"
 							scrolling="no"
+							className="rounded-xl"
 							src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Elomaz%20Hotel%203/5%20Emmanuel%20Street,%20Maryland%20Lagos+(His%20Great%20House)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
 						>
 							<a href="https://www.maps.ie/population/">

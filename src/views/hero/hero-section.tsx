@@ -41,9 +41,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 				<Button
 					onClick={scrollToNextSectionWithDelay}
 					variant="outlined"
-					className="capitalize text-lg font-medium mt-12 outline-0 border-black"
+					className="normal-case text-lg font-medium mt-12 outline-0 border-black"
 				>
-					Join the flow
+					Get to know us
 				</Button>
 			</div>
 		</div>

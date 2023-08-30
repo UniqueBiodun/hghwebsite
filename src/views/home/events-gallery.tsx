@@ -1,13 +1,40 @@
 import { Carousel, IconButton } from "@material-tailwind/react";
 import Headset from "../../assets/icons/headset-mic.svg";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+interface EventProps {
+	start_date?: string;
+	end_date?: string;
+	imageLink?: string;
+}
 
 const EventsGallery: React.FC = () => {
+	const [events, setEvents] = useState<EventProps[]>([]);
+
+	useEffect(() => {
+		const fetchEvents = async () => {
+			try {
+				const response = await axios.get<EventProps[]>(
+					"https://admin.hisgreathouse.org/api/events"
+				);
+				setEvents(response?.data);
+				console.log("Events", events);
+				console.log("Response", response?.data);
+			} catch (error) {
+				console.error("Error fetching events:", error);
+			}
+		};
+
+		fetchEvents();
+	}, [events]);
+
 	return (
 		<>
 			<section className="bg-white min-h-[calc(100vh-100px)] text-sec-200 py-[60px]">
 				<div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
-					<div className="h-full w-full relative overflow-hidden">
+					<div className="h-full w-full relative overflow-hidden border rounded-xl">
 						<div className="shadow-md transform -rotate-45 z-10 w-[350px] text-center text-white text-xl py-2 absolute top-[50px] -left-[100px] bg-black opacity-[0.8]">
 							<p>Upcoming event</p>
 						</div>
@@ -31,12 +58,15 @@ const EventsGallery: React.FC = () => {
 								</div>
 							)}
 						>
-							<img
-								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774727/samples/man-on-a-street.jpg"
-								alt="image 1"
-								className="h-full w-full object-cover"
-							/>
-							<img
+							{events.map((evt: any, i: number) => (
+								<img
+									key={i}
+									src={evt.imageLink}
+									alt="image 1"
+									className="h-full w-full object-cover"
+								/>
+							))}
+							{/* <img
 								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774727/samples/man-on-a-escalator.jpg"
 								alt="image 2"
 								className="h-full w-full object-cover"
@@ -50,12 +80,12 @@ const EventsGallery: React.FC = () => {
 								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774727/samples/man-on-a-street.jpg"
 								alt="image 4"
 								className="h-full w-full object-cover"
-							/>
+							/> */}
 						</Carousel>
 					</div>
 
-					<div className="flex flex-col gap-4 h-full w-full">
-						<div className="h-[40vh] w-full relative">
+					<div className="flex flex-col justify-between gap-4 h-full w-full">
+						<div className="lg:h-[40vh] w-full relative">
 							<div className="w-full rounded-b-xl text-center text-white text-xl py-4 absolute bottom-0 right-0 left-0 bg-black opacity-[0.7]">
 								<div>
 									<Link
@@ -65,7 +95,7 @@ const EventsGallery: React.FC = () => {
 									>
 										<img src={Headset} alt="headset" />
 										<span className="underline text-xl font-medium">
-											Listen now
+											Catch up on our messages
 										</span>
 									</Link>
 								</div>
@@ -76,7 +106,7 @@ const EventsGallery: React.FC = () => {
 								className="rounded-xl h-full w-full object-cover"
 							/>
 						</div>
-						<div className="h-[40vh] w-full relative">
+						<div className="lg:h-[40vh] w-full relative">
 							<Carousel
 								autoplay
 								loop
@@ -114,7 +144,7 @@ const EventsGallery: React.FC = () => {
 									>
 										<img src={Headset} alt="headset" />
 										<span className="underline text-xl font-medium">
-											Listen now
+											Catch up on our messages
 										</span>
 									</Link>
 								</div>

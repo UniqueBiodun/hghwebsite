@@ -5,6 +5,7 @@ import Footer from "./views/containers/footer/footer";
 import Home from "./views/home";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./views/loader/loader";
+import About from "./views/about";
 
 function App({}) {
 	const [receivedData, setReceivedData] = useState("");
@@ -51,6 +52,7 @@ function App({}) {
 					)}
 					<Routes>
 						<Route path="/" element={<Home />} />
+						<Route path="/about" element={<About />} />
 					</Routes>
 
 					<Footer />

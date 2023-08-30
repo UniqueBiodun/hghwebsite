@@ -50,12 +50,12 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 					<motion.div
 						initial={{ y: "-10vh", opacity: 0 }}
 						animate={animation}
-						className="w-full h-full text-center"
+						className="w-full h-full text-left"
 					>
 						<h3 className="text-2xl font-semibold text-sec-100 pb-4">
 							Meet Our Lead Pastor
 						</h3>
-						<p className="text-center text-xl text-sec-300">
+						<p className="text-left text-xl text-sec-300">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
 							voluptate et expedita repellat ea delectus nemo enim placeat cum
 							porro sit, accusantium quaerat perspiciatis distinctio qui quis?

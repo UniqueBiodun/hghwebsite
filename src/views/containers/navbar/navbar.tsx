@@ -164,8 +164,9 @@ import HGHLOGO from "../../../assets/icons/hghburglogo.svg";
 import HGHLOGOWhite from "../../../assets/icons/hghwhitelogo.svg";
 import Menu from "../../../assets/icons/menu-burg.svg";
 import MenuWhite from "../../../assets/icons/menu-white.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IconButton } from "@material-tailwind/react";
+import { navlinks } from "./nav-links";
 
 interface NavbarProps {
 	isOpen: boolean;
@@ -191,15 +192,19 @@ const Navbar: React.FC<NavbarProps> = ({
 		toggleSidebar();
 	};
 
+	const handleNavlinkClick = () => {
+		toggleSidebar(); // Close the sidebar when a navlink is clicked
+	};
+
 	return (
 		<>
 			<span
-				className={`py-3 fixed top-0 right-0 left-0 z-30 ${
+				className={`py-4 fixed top-0 right-0 left-0 z-30 ${
 					color ? "bg-primary" : "bg-transparent backdrop-filter-none"
 				}`}
 			>
 				<nav className={` container flex justify-between `}>
-					<div className="cursor-pointer">
+					<div className="cursor-pointer w-6 sm:w-10">
 						<Link to="/">
 							{color ? (
 								<img src={HGHLOGOWhite} alt="hgh-logo" />
@@ -208,7 +213,7 @@ const Navbar: React.FC<NavbarProps> = ({
 							)}
 						</Link>
 					</div>
-					<div onClick={sendAndToggle} className="cursor-pointer">
+					<div onClick={sendAndToggle} className="cursor-pointer w-6 sm:w-10">
 						{color ? (
 							<img src={MenuWhite} alt="menu-icon" />
 						) : (
@@ -225,12 +230,26 @@ const Navbar: React.FC<NavbarProps> = ({
 				<span className="absolute top-4 right-4" onClick={toggleSidebar}>
 					<IconButton
 						variant="text"
-						className="text-white rounded-full text-3xl"
+						className="text-white rounded-full text-2xl"
 					>
 						<i className="fas fa-close" />
 					</IconButton>
 				</span>
-				<div className="p-4">{/* Sidebar content goes here */}</div>
+				<div className="p-16 mt-16">
+					{navlinks.map((navlink: any, i: number) => (
+						<ul key={i}>
+							<li className="pb-6">
+								<NavLink
+									to={navlink.link}
+									onClick={handleNavlinkClick}
+									target={navlink.target}
+								>
+									{navlink.title}
+								</NavLink>
+							</li>
+						</ul>
+					))}
+				</div>
 			</div>
 		</>
 	);

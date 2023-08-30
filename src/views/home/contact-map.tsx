@@ -1,34 +1,35 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const ContactMap: React.FC = () => {
-	const [fullName, setFullName] = useState("");
+	const [fullname, setFullname] = useState("");
 	const [email, setEmail] = useState("");
-	const [phoneNumber, setPhoneNumber] = useState("");
+	const [phone_number, setPhoneNumber] = useState("");
 	const [message, setMessage] = useState("");
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log("Full Name:", fullName);
-		console.log("Email:", email);
-		console.log("Message:", message);
+		try {
+			const response = await axios.post(
+				"https://www.admin.hisgreathouse.org/api/contact",
+				{
+					fullname,
+					email,
+					phone_number,
+					message,
+				}
+			);
+			console.log("Response:", response.data);
+			alert(response?.data.message);
+			// Clear form fields after successful submission
+			setFullname("");
+			setEmail("");
+			setPhoneNumber("");
+			setMessage("");
+		} catch (error) {
+			console.error("Error submitting form:", error);
+		}
 	};
-
-	// const handleSubmit = async (e: React.FormEvent) => {
-	// 	e.preventDefault();
-	// 	try {
-	// 	  const response = await axios.post('http://localhost:5000/submit', {
-	// 		fullName,
-	// 		email,
-	// 		message,
-	// 	  });
-	// 	  console.log('Response:', response.data);
-	// 	  // Clear form fields after successful submission
-	// 	  setFullName('');
-	// 	  setEmail('');
-	// 	  setMessage('');
-	// 	} catch (error) {
-	// 	  console.error('Error submitting form:', error);
-	// 	}
 
 	return (
 		<>
@@ -40,17 +41,17 @@ const ContactMap: React.FC = () => {
 								<div className="mb-4">
 									<input
 										type="text"
-										className="w-full px-4 py-[26px] text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
-										value={fullName}
+										className="w-full px-4 py-5 text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
+										value={fullname}
 										placeholder="Full name"
-										onChange={(e) => setFullName(e.target.value)}
+										onChange={(e) => setFullname(e.target.value)}
 										required
 									/>
 								</div>
 								<div className="mb-4">
 									<input
 										type="email"
-										className="w-full px-4 py-[26px] text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
+										className="w-full px-4 py-5 text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
 										value={email}
 										placeholder="Email address"
 										onChange={(e) => setEmail(e.target.value)}
@@ -60,8 +61,8 @@ const ContactMap: React.FC = () => {
 								<div className="mb-4">
 									<input
 										type="tel"
-										className="w-full px-4 py-[26px] text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
-										value={phoneNumber}
+										className="w-full px-4 py-5 text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
+										value={phone_number}
 										placeholder="Phone number"
 										onChange={(e) => setPhoneNumber(e.target.value)}
 										required
@@ -79,7 +80,7 @@ const ContactMap: React.FC = () => {
 								</div>
 								<button
 									type="submit"
-									className="w-full px-4 py-[26px] text-[#fff] text-xl rounded-lg border border-[#EBEBEB] bg-[#530E25] hover:bg-[#31121c]"
+									className="w-full px-4 py-5 text-[#fff] text-xl rounded-lg border border-[#EBEBEB] bg-[#530E25] hover:bg-[#31121c]"
 								>
 									Contact Us
 								</button>

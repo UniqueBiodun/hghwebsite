@@ -17,7 +17,7 @@ const Loader: React.FC = () => {
 			scale: [0.1, 0.5, 0.8, 0.9, 1.0],
 			transition: {
 				repeat: Infinity,
-				duration: 5,
+				duration: 4,
 				ease: "linear",
 			},
 		},
@@ -30,7 +30,7 @@ const Loader: React.FC = () => {
 					initial="anticlockwise"
 					animate="clockwise"
 					variants={rotationVariants}
-					className="w-[15%]"
+					className="w-[40%]"
 					src={HGHLogo}
 					alt="hghlogo"
 				/>

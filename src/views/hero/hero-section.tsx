@@ -31,17 +31,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 				/>
 			</video>
 			<div className="relative text-black text-center flex flex-col items-center justify-center h-full">
-				<h1 className="text-4xl sm:text-6xl w-[80%] sm:w-[80%] font-bold mb-4">
+				<h1 className="text-4xl md:text-6xl w-[80%] sm:w-[80%] font-bold mb-4">
 					HERO SECTION HEADER
 				</h1>
-				<p className="text-lg w-[70%] sm:w-[50%] animate-pulse">
+				<p className="text-lg md:text-2xl w-[70%] sm:w-[50%] animate-pulse">
 					Assistive text Lorem ipsum dolor sit amet consectetur adipisicing
 					elit. Quae, at iusto? Ab expedita blanditiis magnam!
 				</p>
 				<Button
 					onClick={scrollToNextSectionWithDelay}
 					variant="outlined"
-					className="normal-case text-lg font-medium mt-12 outline-0 border-black"
+					className="normal-case text-base md:text-xl font-medium mt-12 outline-0 border-black"
 				>
 					Get to know us
 				</Button>

@@ -28,10 +28,12 @@ const TextImgContainer: React.FC<TextImgContainerProps> = ({
 					{/* First Div */}
 					<div className="w-full sm:w-[50%] flex flex-row items-center">
 						<div>
-							<h1 className="text-sec-400 text-3xl font-semibold pb-4">
+							<h1 className="text-sec-400 text-2xl md:text-3xl font-semibold pb-4">
 								{sectionHeading}
 							</h1>
-							<p className="text-sec-300 text-2xl">{sectionBody}</p>
+							<p className="text-sec-300 text-base md:text-2xl">
+								{sectionBody}
+							</p>
 						</div>
 					</div>
 

@@ -35,7 +35,7 @@ const EventsGallery: React.FC = () => {
 			<section className="bg-white min-h-[calc(100vh-100px)] text-sec-200 py-[60px] font-poppins">
 				<div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
 					<div className="h-full w-full relative overflow-hidden border rounded-xl">
-						<div className="shadow-md transform -rotate-45 z-10 w-[350px] text-center text-white text-xl py-2 absolute top-[50px] -left-[100px] bg-black opacity-[0.8]">
+						<div className="shadow-md transform -rotate-45 z-10 w-[350px] text-center text-white text-base md:text-xl py-2 absolute top-[50px] -left-[100px] bg-black opacity-[0.8]">
 							<p>Upcoming event</p>
 						</div>
 						<Carousel
@@ -79,7 +79,7 @@ const EventsGallery: React.FC = () => {
 										className="flex gap-2 justify-center items-center"
 									>
 										<img src={Headset} alt="headset" />
-										<span className="underline text-xl font-medium">
+										<span className="underline text-base md:text-xl font-medium">
 											Catch up on our messages
 										</span>
 									</Link>
@@ -128,7 +128,7 @@ const EventsGallery: React.FC = () => {
 										className="flex gap-2 justify-center items-center"
 									>
 										<img src={Headset} alt="headset" />
-										<span className="underline text-xl font-medium">
+										<span className="underline text-base md:text-xl font-medium">
 											Catch up on our messages
 										</span>
 									</Link>

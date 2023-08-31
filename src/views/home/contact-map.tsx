@@ -41,7 +41,7 @@ const ContactMap: React.FC = () => {
 								<div className="mb-4">
 									<input
 										type="text"
-										className="w-full px-4 py-5 text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
+										className="w-full px-4 py-5 text-[#7A7A7A] text-base md:text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
 										value={fullname}
 										placeholder="Full name"
 										onChange={(e) => setFullname(e.target.value)}
@@ -51,7 +51,7 @@ const ContactMap: React.FC = () => {
 								<div className="mb-4">
 									<input
 										type="email"
-										className="w-full px-4 py-5 text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
+										className="w-full px-4 py-5 text-[#7A7A7A] text-base md:text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
 										value={email}
 										placeholder="Email address"
 										onChange={(e) => setEmail(e.target.value)}
@@ -61,7 +61,7 @@ const ContactMap: React.FC = () => {
 								<div className="mb-4">
 									<input
 										type="tel"
-										className="w-full px-4 py-5 text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
+										className="w-full px-4 py-5 text-[#7A7A7A] text-base md:text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
 										value={phone_number}
 										placeholder="Phone number"
 										onChange={(e) => setPhoneNumber(e.target.value)}
@@ -70,7 +70,7 @@ const ContactMap: React.FC = () => {
 								</div>
 								<div className="mb-4">
 									<textarea
-										className="w-full px-4 py-[18px] resize-none text-[#7A7A7A] text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
+										className="w-full px-4 py-[18px] resize-none text-[#7A7A7A] text-base md:text-xl rounded-lg border border-[#EBEBEB] bg-[#F9F9F9]"
 										rows={4}
 										value={message}
 										placeholder="Message"
@@ -80,7 +80,7 @@ const ContactMap: React.FC = () => {
 								</div>
 								<button
 									type="submit"
-									className="w-full px-4 py-5 text-[#fff] text-xl rounded-lg border border-[#EBEBEB] bg-[#530E25] hover:bg-[#31121c]"
+									className="w-full px-4 py-5 text-[#fff] text-base md:text-xl rounded-lg border border-[#EBEBEB] bg-[#530E25] hover:bg-[#31121c]"
 								>
 									Contact Us
 								</button>

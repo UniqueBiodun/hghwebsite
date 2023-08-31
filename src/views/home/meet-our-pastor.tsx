@@ -52,10 +52,10 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 						animate={animation}
 						className="w-full h-full text-left"
 					>
-						<h3 className="text-2xl font-semibold text-sec-100 pb-4">
+						<h3 className="text-xl md:text-2xl font-semibold text-sec-100 pb-4">
 							Meet Our Lead Pastor
 						</h3>
-						<p className="text-left text-xl text-sec-300">
+						<p className="text-left text-base md:text-xl text-sec-300">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
 							voluptate et expedita repellat ea delectus nemo enim placeat cum
 							porro sit, accusantium quaerat perspiciatis distinctio qui quis?
@@ -82,7 +82,7 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 						</p>
 					</motion.div>
 					<motion.div animate={animation} className="w-full h-full relative">
-						<div className="w-full text-center text-white text-xl py-5 absolute bottom-5 md:bottom-10 right-0 left-0 bg-black opacity-[0.7]">
+						<div className="w-full text-center text-white text-base md:text-xl py-5 absolute bottom-5 md:bottom-10 right-0 left-0 bg-black opacity-[0.7]">
 							<p>Pastor Olufemi Ibitoye</p>
 						</div>
 						<img

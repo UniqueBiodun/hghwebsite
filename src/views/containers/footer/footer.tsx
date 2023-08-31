@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
 	return (
 		<>
-			<footer className="bg-primary h-3/4 pt-12 pb-12 text-white text-base font-poppins">
+			<footer className="bg-primary h-3/4 py-6 text-white text-base font-poppins">
 				<div className="container flex flex-col gap-10 text-center justify-center items-center">
 					<div>
 						<img className="w-24 h-24" src={HGHWhiteLogo} alt="hghlogo" />
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
 							</Link>
 						</span>
 					</div>
-					<div className="border-t-2 border-white p-10 lg:w-1/2 md:w-[70%] w-[80%]">
+					<div className="border-t-2 border-white pt-8 text-sm md:text-base md:p-10 lg:w-1/2 md:w-[70%] w-[100%]">
 						<p>&copy; 2023 His Great House. All rights reserved.</p>
 					</div>
 				</div>

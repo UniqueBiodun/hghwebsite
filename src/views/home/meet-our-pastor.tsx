@@ -41,7 +41,7 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 		<>
 			<section
 				ref={refProp}
-				className="bg-[#F9F9F9] min-h-[80vh] text-sec-400 py-[60px]"
+				className="bg-[#F9F9F9] min-h-[80vh] text-sec-400 py-[60px] font-poppins"
 			>
 				<div
 					ref={ref}

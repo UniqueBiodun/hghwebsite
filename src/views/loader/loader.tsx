@@ -25,7 +25,7 @@ const Loader: React.FC = () => {
 
 	return (
 		<>
-			<section className="bg-primary flex justify-center items-center fixed z-40 h-[100vh] w-full">
+			<section className="bg-primary flex justify-center items-center fixed z-40 h-[100vh] w-full font-poppins">
 				<motion.img
 					initial="anticlockwise"
 					animate="clockwise"

@@ -24,6 +24,11 @@ module.exports = withMT({
 				},
 			},
 		},
+
+		fontFamily: {
+			poppins: ["Poppins", "sans-serif"],
+		},
+
 		container: {
 			padding: {
 				DEFAULT: "1rem",

@@ -3,7 +3,7 @@ import React from "react";
 const ImageGallery: React.FC = () => {
 	return (
 		<>
-			<section className="py-[60px] min-h-[50vh] lg:min-h-screen">
+			<section className="py-[60px] min-h-[50vh] lg:min-h-screen font-poppins">
 				<div className="container h-full mx-auto grid grid-cols-2 lg:grid-cols-3 gap-4">
 					<div className="flex flex-col gap-4">
 						<div className="block sm:hidden text-xl text-sec-400 font-semibold">

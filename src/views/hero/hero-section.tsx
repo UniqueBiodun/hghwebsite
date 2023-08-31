@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 	};
 
 	return (
-		<div className="relative h-screen">
+		<div className="relative h-screen font-poppins">
 			<video
 				autoPlay
 				muted

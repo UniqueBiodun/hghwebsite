@@ -33,7 +33,7 @@ const ContactMap: React.FC = () => {
 
 	return (
 		<>
-			<section className="bg-white min-h-[110vh] py-[60px]">
+			<section className="bg-white min-h-[110vh] py-[60px] font-poppins">
 				<div className="container mx-auto grid grid-cols-1 justify-between gap-[60px]">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 						<div className="">

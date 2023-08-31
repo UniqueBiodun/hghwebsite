@@ -28,11 +28,11 @@ const EventsGallery: React.FC = () => {
 		};
 
 		fetchEvents();
-	}, [events]);
+	}, []);
 
 	return (
 		<>
-			<section className="bg-white min-h-[calc(100vh-100px)] text-sec-200 py-[60px]">
+			<section className="bg-white min-h-[calc(100vh-100px)] text-sec-200 py-[60px] font-poppins">
 				<div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
 					<div className="h-full w-full relative overflow-hidden border rounded-xl">
 						<div className="shadow-md transform -rotate-45 z-10 w-[350px] text-center text-white text-xl py-2 absolute top-[50px] -left-[100px] bg-black opacity-[0.8]">
@@ -66,21 +66,6 @@ const EventsGallery: React.FC = () => {
 									className="h-full w-full object-cover"
 								/>
 							))}
-							{/* <img
-								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774727/samples/man-on-a-escalator.jpg"
-								alt="image 2"
-								className="h-full w-full object-cover"
-							/>
-							<img
-								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774729/cld-sample-3.jpg"
-								alt="image 3"
-								className="h-full w-full object-cover"
-							/>
-							<img
-								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1690774727/samples/man-on-a-street.jpg"
-								alt="image 4"
-								className="h-full w-full object-cover"
-							/> */}
 						</Carousel>
 					</div>
 

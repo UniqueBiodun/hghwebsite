@@ -30,7 +30,7 @@ const Loader: React.FC = () => {
 					initial="anticlockwise"
 					animate="clockwise"
 					variants={rotationVariants}
-					className="w-[40%]"
+					className="w-[40%] md:w-[25%]"
 					src={HGHLogo}
 					alt="hghlogo"
 				/>

@@ -26,6 +26,12 @@ const Navbar: React.FC<NavbarProps> = ({
 			setColor(true);
 		} else if (location.pathname === "/about") {
 			setColor(true);
+		} else if (location.pathname === "/first-timer") {
+			setColor(true);
+		} else if (location.pathname === "/pray") {
+			setColor(true);
+		} else if (location.pathname === "/give") {
+			setColor(true);
 		} else {
 			setColor(false);
 		}
@@ -80,22 +86,22 @@ const Navbar: React.FC<NavbarProps> = ({
 				</nav>
 			</span>
 			<div
-				className={`z-50 fixed top-0 right-0 h-screen w-full sm:w-[40%] md:w-[35%] lg:w-1/4 bg-gray-800 text-white font-poppins transition-transform duration-300 transform ${
+				className={`z-50 fixed top-0 right-0 h-screen w-full sm:w-[40%] md:w-[35%] lg:w-1/4 bg-[#fff] text-[#464646] hover:text-[#530E25]  font-poppins transition-transform duration-300 transform ${
 					isOpen ? "translate-x-0" : "translate-x-full"
 				}`}
 			>
 				<span className="absolute top-4 right-4" onClick={toggleSidebar}>
 					<IconButton
 						variant="text"
-						className="text-white rounded-full text-2xl"
+						className="text-[#000] rounded-full text-2xl"
 					>
 						<i className="fas fa-close" />
 					</IconButton>
 				</span>
-				<div className="p-16 mt-16">
+				<div className="pl-8 mt-16">
 					{navlinks.map((navlink: any, i: number) => (
 						<ul key={i}>
-							<li className="pb-6">
+							<li className="pb-4 text-base md:text-lg font-medium">
 								<NavLink
 									to={navlink.link}
 									onClick={handleNavlinkClick}

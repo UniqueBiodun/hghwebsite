@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import HeroSection from "../hero/hero-section";
+import HeroSection from "../../hero/hero-section";
 import MeetOurPastor from "./meet-our-pastor";
 import EventsGallery from "./events-gallery";
 import ContactMap from "./contact-map";
@@ -12,6 +12,7 @@ const Home: React.FC = () => {
 			<HeroSection scrollRef={meetOurPastorRef} />
 			<MeetOurPastor refProp={meetOurPastorRef} />
 			<EventsGallery />
+
 			<ContactMap />
 		</>
 	);

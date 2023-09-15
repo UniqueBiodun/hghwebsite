@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import ScrollToTop from "./helper/ScrollToTop";
 import Navbar from "./views/containers/navbar/navbar";
 import Footer from "./views/containers/footer/footer";
-import Home from "./views/home";
+import Home from "./views/pages/home";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./views/loader/loader";
-import About from "./views/about";
+import About from "./views/pages/about";
+import FirstTimer from "./views/pages/first-timer";
+import LetsPray from "./views/pages/lets-pray";
+import Give from "./views/pages/give";
 
 function App({}) {
 	const [receivedData, setReceivedData] = useState("");
@@ -38,6 +41,7 @@ function App({}) {
 			) : (
 				<>
 					<ScrollToTop />
+
 					<Navbar
 						isOpen={isOpen}
 						toggleSidebar={toggleSidebar}
@@ -53,6 +57,9 @@ function App({}) {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
+						<Route path="/first-timer" element={<FirstTimer />} />
+						<Route path="/pray" element={<LetsPray />} />
+						<Route path="/give" element={<Give />} />
 					</Routes>
 
 					<Footer />

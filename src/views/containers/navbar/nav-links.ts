@@ -5,22 +5,37 @@ export const navlinks = [
 		target: "",
 	},
 	{
-		title: "Who we are",
-		link: "/about",
-		target: "",
-	},
-	{
 		title: "Teachings",
 		link: "https://linktr.ee/hisgreathouse",
 		target: "_blank",
 	},
 	{
-		title: "HGH-i",
-		link: "",
+		title: "Who we are",
+		link: "/about",
+		target: "",
+	},
+	{
+		title: "First timer",
+		link: "/first-timer",
+		target: "",
+	},
+	{
+		title: "Let's Pray",
+		link: "/pray",
+		target: "",
+	},
+	{
+		title: "Contact Us",
+		link: "/",
 		target: "",
 	},
 	{
 		title: "Give",
+		link: "/give",
+		target: "",
+	},
+	{
+		title: "HGH-i",
 		link: "",
 		target: "",
 	},

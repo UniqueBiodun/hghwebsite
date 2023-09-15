@@ -42,6 +42,7 @@ module.exports = withMT({
 		backgroundImage: {
 			lquote: "url('/src/assets/icons/left-quote.svg')",
 			rquote: "url('/src/assets/icons/right-quote.svg')",
+			drop: "url('/src/assets/icons/chevron_right.svg')",
 			"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 		},
 	},

@@ -6,7 +6,7 @@ export const navlinks = [
 	},
 	{
 		title: "Teachings",
-		link: "https://linktr.ee/hisgreathouse",
+		link: "https://mainstack.me/hisgreathouse",
 		target: "_blank",
 	},
 	{

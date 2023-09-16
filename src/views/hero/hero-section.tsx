@@ -30,20 +30,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 					type="video/mp4"
 				/>
 			</video>
-			<div className="relative text-black text-center flex flex-col items-center justify-center h-full">
-				<h1 className="text-4xl md:text-6xl w-[80%] sm:w-[80%] font-bold mb-4">
-					HERO SECTION HEADER
+			<div className="relative container text-black p-4 text-left md:text-center flex flex-col items-center justify-center h-full">
+				<h1 className="text-5xl uppercase text-center md:text-[64px] w-[100%] sm:w-[80%] lg:w-[55%] font-bold mb-4">
+					Welcome to the home of peace
 				</h1>
-				<p className="text-lg md:text-2xl w-[70%] sm:w-[50%] animate-pulse">
-					Assistive text Lorem ipsum dolor sit amet consectetur adipisicing
-					elit. Quae, at iusto? Ab expedita blanditiis magnam!
+				<p className="text-lg md:text-2xl w-[100%] lg:w-[55%] text-center md:w-[80%] sm:w-[65%] animate-pulse">
+					We are a close-knit family of young and vibrant individuals bonded by
+					the Spirit of love as the centre of the house. We are passionate about
+					God and we’re held up by the pillars of the Spirit, Love, Peace, Grace
+					and Truth.
 				</p>
 				<Button
 					onClick={scrollToNextSectionWithDelay}
 					variant="outlined"
-					className="normal-case text-base md:text-xl font-medium mt-12 outline-0 border-black"
+					className="normal-case w-full sm:w-[40%] md:w-[40%] lg:w-[25%] xl:w-[20%] px-2 text-base md:text-xl font-medium mt-12 outline-0 border-black"
 				>
-					Get to know us
+					Come journey with us
 				</Button>
 			</div>
 		</div>

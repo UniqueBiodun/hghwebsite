@@ -52,22 +52,27 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 						className="w-full text-left"
 					>
 						<h3 className="text-2xl md:text-4xl font-semibold text-sec-100 pb-4">
-							Meet Our Lead Pastor
+							Welcome address
 						</h3>
+						<p className="text-left text-base md:text-xl text-sec-300 pb-3">
+							We are more than thrilled that you have chosen to come and have an
+							experience of Peace as we’re called to cater to a generation that
+							seeks answers to things that seem unanswerable. Our atmosphere
+							fulfils your core life need which is to be solidly founded in
+							Christ. With giant hugs and so much love in our hearts, we’re
+							stoked to let you know that you have a home with us. At His Great
+							House, you will find the peace of God that passeth all
+							understanding as you come to the knowledge of who you are in
+							Christ and take your place as a son of God.
+						</p>
 						<p className="text-left text-base md:text-xl text-sec-300">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-							voluptate et expedita repellat ea delectus nemo enim placeat cum
-							porro sit, accusantium quaerat perspiciatis distinctio qui quis?
-							Esse, incidunt. Fugit, vel maxime aut nemo illo illum fuga
-							nesciunt aliquid. Esse, consequuntur atque? Quasi, odio voluptas.
-							Nesciunt quaerat molestias saepe assumenda, repellat doloribus
-							facilis adipisci obcaecati.
+							Love, <br /> Olufemi Ibitoye, <br /> Lead Pastor.
 						</p>
 					</motion.div>
 					<div className="w-full relative">
-						<div className="w-full rounded-b-[4px] text-center text-white text-base md:text-xl py-[14px] absolute bottom-0 right-0 left-0 bg-primary">
+						{/* <div className="w-full rounded-b-[4px] text-center text-white text-base md:text-xl py-[14px] absolute bottom-0 right-0 left-0 bg-primary">
 							<p>Pastor Olufemi Ibitoye</p>
-						</div>
+						</div> */}
 						<img
 							className="rounded h-[224px] md:h-[424px] w-full object-cover"
 							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694701110/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/MeetOurPastor_h5dmci.png"

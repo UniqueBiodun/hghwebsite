@@ -41,11 +41,16 @@ const FirstTimerForm: React.FC = () => {
 			<section className="min-h-[70vh] py-10 font-poppins">
 				<div className="container bg-[#f9f9f9] mx-auto">
 					<div className="w-full md:w-[90%] mx-auto">
-						<div className="py-10 gap-4 text-center">
+						<div className="py-10 text-center">
 							<span className="bg-[#F2EBEE] text-[#530E25] px-3 py-1 rounded-[40px]">
 								First timer form
 							</span>
-							<h2 className="text-xl md:text-4xl pt-2">Welcome home!</h2>
+							<h2 className="text-xl md:text-4xl py-4">Welcome home!</h2>
+							<p className="text-lg text-[#2f2f2f] mx-auto w-[100%] lg:w-[70%] text-center md:w-[80%] sm:w-[65%]">
+								Holla!!! Welcome to the home of peace and we’re super excited to
+								have you. We’d love to know you better, it would only take a
+								minute, we promise.
+							</p>
 						</div>
 						<div className="grid grid-cols-1 gap-4">
 							<div className="text-center">
@@ -54,7 +59,7 @@ const FirstTimerForm: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="text"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 placeholder:text-[#ABA9BC] text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={fullname}
 												placeholder="Full name"
 												onChange={(e) => setFullname(e.target.value)}
@@ -64,7 +69,7 @@ const FirstTimerForm: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="email"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 placeholder:text-[#ABA9BC] text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={email}
 												placeholder="Email address"
 												onChange={(e) => setEmail(e.target.value)}
@@ -76,7 +81,7 @@ const FirstTimerForm: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="tel"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 placeholder:text-[#ABA9BC] text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={phone_number}
 												placeholder="Phone number"
 												onChange={(e) => setPhoneNumber(e.target.value)}
@@ -86,7 +91,7 @@ const FirstTimerForm: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="email"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 placeholder:text-[#ABA9BC] text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={profession}
 												placeholder="Profession"
 												onChange={(e) => setProfession(e.target.value)}
@@ -96,7 +101,7 @@ const FirstTimerForm: React.FC = () => {
 									<div className="mb-4 flex flex-col gap-6 md:flex-row justify-between">
 										<div className="w-full">
 											<select
-												className="bg-drop bg-right appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#fdfdfd]"
+												className="bg-drop bg-[95%] appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#fdfdfd]"
 												onChange={(e) => setGender(e.target.value)}
 												value={gender}
 											>
@@ -108,7 +113,7 @@ const FirstTimerForm: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="date"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 placeholder:text-[#ABA9BC] text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={birthday}
 												placeholder="Birthday"
 												onChange={(e) => setBirthday(e.target.value)}
@@ -120,7 +125,7 @@ const FirstTimerForm: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="tel"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 placeholder:text-[#ABA9BC] text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={phone_number}
 												placeholder="House address"
 												onChange={(e) => setPhoneNumber(e.target.value)}
@@ -130,7 +135,7 @@ const FirstTimerForm: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="email"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 placeholder:text-[#ABA9BC] text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={profession}
 												placeholder="Location (e.g Ogba, Lagos)"
 												onChange={(e) => setProfession(e.target.value)}
@@ -140,7 +145,7 @@ const FirstTimerForm: React.FC = () => {
 									<div className="mb-4 flex flex-col gap-6 md:flex-row justify-between">
 										<div className="w-full">
 											<select
-												className="bg-drop bg-right appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#fdfdfd]"
+												className="bg-drop bg-[95%] appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#fdfdfd]"
 												onChange={(e) => setAboutUs(e.target.value)}
 												value={aboutUs}
 											>
@@ -151,7 +156,7 @@ const FirstTimerForm: React.FC = () => {
 										</div>
 										<div className="w-full">
 											<select
-												className="bg-drop bg-right appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#fdfdfd]"
+												className="bg-drop bg-[95%] appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#fdfdfd]"
 												onChange={(e) => setTime(e.target.value)}
 												value={time}
 											>

@@ -35,14 +35,19 @@ const ContactMap: React.FC = () => {
 
 	return (
 		<>
-			<section className="min-h-[70vh] py-10 font-poppins">
-				<div className="container bg-[#f9f9f9] mx-auto">
+			<section className="min-h-[70vh] bg-white py-10 font-poppins">
+				<div className="container mx-auto">
 					<div className="w-full md:w-[90%] mx-auto">
-						<div className="py-10 gap-4 text-center md:text-left">
+						<div className="py-10 text-center">
 							<span className="bg-[#F2EBEE] text-[#530E25] px-3 py-1 rounded-[40px]">
 								Reach us with ease
 							</span>
-							<h2 className="text-xl md:text-4xl pt-2">Contact Us</h2>
+							<h2 className="text-xl md:text-4xl py-4">Contact Us</h2>
+							<p className="text-lg text-[#2f2f2f] mx-auto w-[100%] lg:w-[70%] text-center md:w-[80%] sm:w-[65%]">
+								We’d love to hear from you. If there’s anything you’d like to
+								tell us, any question you’d like to ask or any inquiry you’d
+								like to make, here’s your opportunity
+							</p>
 						</div>
 						<div className="grid grid-cols-1 gap-4">
 							<div className="text-center">
@@ -50,7 +55,7 @@ const ContactMap: React.FC = () => {
 									<div className="mb-4">
 										<input
 											type="text"
-											className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+											className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 											value={fullname}
 											placeholder="Full name"
 											onChange={(e) => setFullname(e.target.value)}
@@ -61,7 +66,7 @@ const ContactMap: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="tel"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={phone_number}
 												placeholder="Phone number"
 												onChange={(e) => setPhoneNumber(e.target.value)}
@@ -71,7 +76,7 @@ const ContactMap: React.FC = () => {
 										<div className="w-full">
 											<input
 												type="email"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 												value={email}
 												placeholder="Email address"
 												onChange={(e) => setEmail(e.target.value)}
@@ -81,10 +86,10 @@ const ContactMap: React.FC = () => {
 									</div>
 									<div className="mb-4">
 										<textarea
-											className="w-full px-6 py-4 resize-none text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
+											className="w-full px-6 py-4 resize-none text-[#ABA9BC] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#FdFdFd]"
 											rows={4}
 											value={message}
-											placeholder="Message"
+											placeholder="What’s up? What would you like to tell us?"
 											onChange={(e) => setMessage(e.target.value)}
 											required
 										/>
@@ -92,7 +97,7 @@ const ContactMap: React.FC = () => {
 									<div className="mb-4 flex flex-col gap-6 md:flex-row justify-between">
 										<div className="w-full">
 											<select
-												className="bg-drop bg-right appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#fdfdfd]"
+												className="bg-drop bg-[95%] appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#fdfdfd]"
 												onChange={(e) => setCall(e.target.value)}
 												value={call}
 											>
@@ -105,7 +110,7 @@ const ContactMap: React.FC = () => {
 										</div>
 										<div className="w-full">
 											<select
-												className="bg-drop bg-right appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#fdfdfd]"
+												className="bg-drop bg-[95%] appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#fdfdfd]"
 												onChange={(e) => setTime(e.target.value)}
 												value={time}
 											>
@@ -120,7 +125,7 @@ const ContactMap: React.FC = () => {
 									</div>
 									<button
 										type="submit"
-										className="w-full md:w-[30%] px-6 my-10 py-4 text-[#FEFDFF] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#530E25] hover:bg-[#31121c]"
+										className="w-full md:w-[30%] px-6 my-10 py-4 text-[#FEFDFF] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#530E25] hover:bg-[#31121c]"
 									>
 										Contact Us
 									</button>
@@ -129,7 +134,7 @@ const ContactMap: React.FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className="container bg-[#fff] pt-10">
+				<div className="container bg-[#f9f9f9] pt-10">
 					<iframe
 						width="100%"
 						height="400"

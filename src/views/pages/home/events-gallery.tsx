@@ -32,7 +32,7 @@ const EventsGallery: React.FC = () => {
 
 	return (
 		<>
-			<section className="bg-[#fff] min-h-[calc(100vh-300px)] text-sec-200 pt-10 pb-[80px] font-poppins">
+			<section className="bg-[#f9f9f9] min-h-[calc(100vh-300px)] text-sec-200 pt-10 pb-[80px] font-poppins">
 				<div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4">
 					<div className="w-full h-[244px] md:h-[560px] relative rounded border-2 bg-blue-gray-500">
 						<div className="w-full rounded-b-[4px] text-center text-white text-base md:text-xl py-[14px] absolute bottom-0 right-0 left-0 bg-primary">
@@ -149,7 +149,7 @@ const EventsGallery: React.FC = () => {
 							<div>
 								<Link
 									target="_blank"
-									to="https://linktr.ee/hisgreathouse"
+									to="https://mainstack.me/hisgreathouse"
 									className="flex gap-2 justify-center items-center"
 								>
 									<img src={Headset} alt="headset" />
@@ -170,7 +170,7 @@ const EventsGallery: React.FC = () => {
 							<div>
 								<Link
 									target="_blank"
-									to="https://linktr.ee/hisgreathouse"
+									to="https://mainstack.me/hisgreathouse"
 									className="flex gap-2 justify-center items-center"
 								>
 									<img src={Headset} alt="headset" />

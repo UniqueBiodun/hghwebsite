@@ -12,7 +12,6 @@ const Home: React.FC = () => {
 			<HeroSection scrollRef={meetOurPastorRef} />
 			<MeetOurPastor refProp={meetOurPastorRef} />
 			<EventsGallery />
-
 			<ContactMap />
 		</>
 	);

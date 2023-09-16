@@ -62,7 +62,10 @@ const Footer: React.FC = () => {
 							</Link>
 						</span>
 						<span>
-							<Link target="_blank" to="facebook.com/hisgreathouse">
+							<Link
+								target="_blank"
+								to="https://www.facebook.com/hisgreathouse/"
+							>
 								<img src={Facebooklogo} alt="facebook-logo" />
 							</Link>
 						</span>

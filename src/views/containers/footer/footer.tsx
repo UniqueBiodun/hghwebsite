@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
 	return (
 		<>
-			<footer className="bg-primary h-3/4 py-6 md:py-14 text-white text-base font-poppins">
+			<footer className="bg-primary h-3/4 py-6 md:py-14 text-white text-base font-noto">
 				<div className="container flex flex-col gap-10 text-center justify-center items-center">
 					<div>
 						<img className="w-24 h-24" src={HGHWhiteLogo} alt="hghlogo" />

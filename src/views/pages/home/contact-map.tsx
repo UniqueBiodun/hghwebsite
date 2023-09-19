@@ -35,7 +35,7 @@ const ContactMap: React.FC = () => {
 
 	return (
 		<>
-			<section className="min-h-[70vh] bg-white py-10 font-poppins">
+			<section className="min-h-[70vh] bg-white py-10 font-noto">
 				<div className="container mx-auto">
 					<div className="w-full md:w-[90%] mx-auto">
 						<div className="py-10 text-center">

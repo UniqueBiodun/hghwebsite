@@ -38,7 +38,7 @@ const FirstTimerForm: React.FC = () => {
 
 	return (
 		<>
-			<section className="min-h-[70vh] py-10 font-poppins">
+			<section className="min-h-[70vh] py-10 font-noto">
 				<div className="container bg-[#f9f9f9] mx-auto">
 					<div className="w-full md:w-[90%] mx-auto">
 						<div className="py-10 text-center">

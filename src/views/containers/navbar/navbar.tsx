@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({
 	return (
 		<>
 			<span
-				className={`py-4 fixed top-0 right-0 left-0 z-30 font-poppins ${
+				className={`py-4 fixed top-0 right-0 left-0 z-30 font-noto ${
 					color ? "bg-primary" : "bg-transparent backdrop-filter-none"
 				}`}
 			>
@@ -103,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({
 				<div className="pl-8 mt-16">
 					{navlinks.map((navlink: any, i: number) => (
 						<ul key={i}>
-							<li className="pb-4 text-base md:text-lg font-medium">
+							<li className="pb-4 text-base md:text-lg font-medium font-noto">
 								<NavLink
 									to={navlink.link}
 									onClick={handleNavlinkClick}

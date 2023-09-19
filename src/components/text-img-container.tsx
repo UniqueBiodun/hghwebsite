@@ -19,7 +19,7 @@ const TextImgContainer: React.FC<TextImgContainerProps> = ({
 }: TextImgContainerProps) => {
 	return (
 		<>
-			<section className={`min-h-[80vh] ${addStyle} py-[40px] font-poppins`}>
+			<section className={`min-h-[80vh] ${addStyle} py-[40px] font-noto`}>
 				<div
 					className={`container h-full mx-auto flex ${flexDirection} justify-between gap-6 md:gap-4`}
 				>

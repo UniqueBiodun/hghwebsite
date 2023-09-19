@@ -36,7 +36,7 @@ const PrayerForm: React.FC = () => {
 
 	return (
 		<>
-			<section className="min-h-[70vh] py-10 font-poppins">
+			<section className="min-h-[70vh] py-10 font-noto">
 				<div className="container  mx-auto">
 					<div className="w-full md:w-[90%] mx-auto">
 						<div className="pb-10 text-center">

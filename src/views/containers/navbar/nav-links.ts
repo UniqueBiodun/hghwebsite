@@ -26,7 +26,7 @@ export const navlinks = [
 	},
 	{
 		title: "Contact Us",
-		link: "/",
+		link: "/contact",
 		target: "",
 	},
 	{

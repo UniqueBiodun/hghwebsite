@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 				/>
 			</video>
 			<div className="relative container text-black p-4 text-left md:text-center flex flex-col items-center justify-center h-full">
-				<h1 className="text-5xl uppercase text-center md:text-[64px] w-[100%] sm:w-[80%] lg:w-[55%] font-bold mb-4">
+				<h1 className="text-3xl md:text-5xl uppercase text-center md:text-[64px] w-[100%] sm:w-[80%] lg:w-[55%] font-bold mb-4">
 					Welcome to the home of peace
 				</h1>
 				<p className="text-lg md:text-2xl w-[100%] lg:w-[55%] text-center md:w-[80%] sm:w-[65%] animate-pulse">
@@ -43,7 +43,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 				<Button
 					onClick={scrollToNextSectionWithDelay}
 					variant="outlined"
-					className="normal-case w-full sm:w-[40%] md:w-[40%] lg:w-[25%] xl:w-[20%] px-2 text-base md:text-xl font-medium mt-12 outline-0 border-black"
+					className="normal-case w-[80%] sm:w-[40%] md:w-[40%] lg:w-[25%] xl:w-[20%] px-2 text-base md:text-xl font-medium mt-12 outline-0 border-black"
 				>
 					Come journey with us
 				</Button>

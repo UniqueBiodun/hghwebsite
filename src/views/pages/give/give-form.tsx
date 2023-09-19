@@ -1,133 +1,186 @@
 import React, { useState } from "react";
-import axios from "axios";
+import GtbankLogo from "../../../assets/icons/gtbank-logo.png";
+import CopyIcon from "../../../assets/icons/copy-icon.svg";
+import {
+	Accordion,
+	AccordionHeader,
+	AccordionBody,
+} from "@material-tailwind/react";
+import CopyToClipboard from "react-copy-to-clipboard";
 
-const GiveForm: React.FC = () => {
-	const [fullname, setFullname] = useState("");
-	const [email, setEmail] = useState("");
-	const [phone_number, setPhoneNumber] = useState("");
-	const [message, setMessage] = useState("");
-	const [aboutUs, setAboutUs] = useState("");
-	const [time, setTime] = useState("");
+function Icon({ id, open }: any) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			strokeWidth={2}
+			stroke="currentColor"
+			className={`${
+				id === open ? "rotate-180" : ""
+			} h-5 w-5 transition-transform`}
+		>
+			<path
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+			/>
+		</svg>
+	);
+}
 
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
-		try {
-			const response = await axios.post(
-				"https://www.admin.hisgreathouse.org/api/contact",
-				{
-					fullname,
-					email,
-					phone_number,
-				}
-			);
-			console.log("Response:", response.data);
-			alert(response?.data.message);
-			// Clear form fields after successful submission
-			setFullname("");
-			setEmail("");
-			setPhoneNumber("");
-			setAboutUs("");
-			setTime("");
-			setMessage("");
-		} catch (error) {
-			console.error("Error submitting form:", error);
-		}
+const GiveForm: React.FC = ({}) => {
+	const [open, setOpen] = React.useState(0);
+	const [isCopied, setIsCopied] = useState(false);
+
+	// Copy to clipboard
+	const handleCopyClick = () => {
+		setIsCopied(true);
+
+		setTimeout(() => {
+			setIsCopied(false);
+		}, 20000);
 	};
 
+	const handleOpen = (value: any) => setOpen(open === value ? 0 : value);
 	return (
 		<>
-			<section className="min-h-[70vh] py-10 font-poppins">
-				<div className="container bg-[#f9f9f9] mx-auto">
-					<div className="w-full md:w-[90%] mx-auto">
-						<div className="py-10 gap-4 text-center">
-							<span className="bg-[#F2EBEE] text-[#530E25] px-3 py-1 rounded-[40px]">
-								Honour the Lord
+			<section className="min-h-[70vh] py-10 font-noto">
+				<div className="container mx-auto">
+					<div className="w-full md:w-[60%] mx-auto md:px-6">
+						<div className="text-center">
+							<span className="bg-[#FDF4F7] text-[#530E25] font-medium text-base px-3 py-1 rounded-[40px]">
+								Give bountifully
 							</span>
-							<h2 className="text-xl md:text-4xl pt-2">Give Cheerfully</h2>
-						</div>
-						<div className="grid grid-cols-1 gap-4">
-							<div className="text-center">
-								<form onSubmit={handleSubmit}>
-									<div className="w-full mb-4">
-										<input
-											type="text"
-											className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
-											value={fullname}
-											placeholder="Full name"
-											onChange={(e) => setFullname(e.target.value)}
-											required
+							<h2 className="text-[#151515] font-medium text-xl md:text-3xl pt-4">
+								Offerings, seeds, tithes and donations
+							</h2>
+							<div className="bg-[#FDFDFD] border rounded border-[#E1E5EA] text-left flex flex-col gap-8 py-4 px-6 my-10">
+								<p className="text-lg md:text-xl text-sec-300 font-medium">
+									Bank Transfer (Naira)
+								</p>
+								<div className="flex justify-between">
+									<div className="flex items-center gap-2">
+										<img
+											className="w-10 h-10 md:w-auto md:auto"
+											src={GtbankLogo}
+											alt="gtbank-logo"
 										/>
+										<p className="text-base md:text-xl text-sec-300">
+											0717873978
+										</p>
 									</div>
-									<div className="mb-4 flex flex-col gap-6 md:flex-row justify-between">
-										<div className="w-full">
-											<input
-												type="tel"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
-												value={phone_number}
-												placeholder="Phone number"
-												onChange={(e) => setPhoneNumber(e.target.value)}
-												required
-											/>
-										</div>
-										<div className="w-full">
-											<input
-												type="email"
-												className="w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
-												value={email}
-												placeholder="Email address"
-												onChange={(e) => setEmail(e.target.value)}
-												required
-											/>
-										</div>
+									<div className="flex items-center gap-2 cursor-pointer hover:opacity-70">
+										<p className="text-base md:text-lg text-primary">
+											{isCopied ? "Copied" : "Copy"}
+										</p>
+										<CopyToClipboard text="0717873978" onCopy={handleCopyClick}>
+											<img src={CopyIcon} alt="copy-icon" />
+										</CopyToClipboard>
 									</div>
-									<div className="mb-4">
-										<textarea
-											className="w-full px-6 py-4 resize-none text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#FdFdFd]"
-											rows={4}
-											value={message}
-											placeholder="Prayer request"
-											onChange={(e) => setMessage(e.target.value)}
-											required
-										/>
-									</div>
-
-									<div className="mb-4 flex flex-col gap-6 md:flex-row justify-between">
-										<div className="w-full">
-											<select
-												className="bg-drop bg-right appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#fdfdfd]"
-												onChange={(e) => setAboutUs(e.target.value)}
-												value={aboutUs}
-											>
-												<option value="">
-													Would you like to schedule a call with our Pastor?
-												</option>
-												<option value="yes">Yes</option>
-												<option value="no">No</option>
-											</select>
-										</div>
-										<div className="w-full">
-											<select
-												className="bg-drop bg-right appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#ABA9BC] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#fdfdfd]"
-												onChange={(e) => setTime(e.target.value)}
-												value={time}
-											>
-												<option value="">Preferred time of call</option>
-												<option value="anytime">Anytime</option>
-												<option value="8am">8am - 12noon</option>
-												<option value="12noon">12noon - 3pm</option>
-												<option value="3pm">3pm - 6pm</option>
-												<option value="6pm">6pm - 8pm</option>
-											</select>
-										</div>
-									</div>
-									<button
-										type="submit"
-										className="w-full md:w-[30%] px-6 my-10 py-4 text-[#FEFDFF] text-base md:text-xl rounded border border-[#EBEBEB] bg-[#530E25] hover:bg-[#31121c]"
-									>
-										Submit
-									</button>
-								</form>
+								</div>
+								<p className="text-base md:text-xl text-sec-300">
+									<span className="font-medium">Account Name:</span> God’s
+									Chamber Global/His Great House
+								</p>
+								<p className="text-base md:text-xl text-sec-300">
+									<span className="font-medium">Narration:</span>{" "}
+									Seed/Tithe/Offering/Donation
+								</p>
 							</div>
+						</div>
+						<div className="pt-5 md:pt-10 pb-10 md:pb-20">
+							<h2 className="text-[#151515] text-center font-medium text-xl md:text-3xl pb-12">
+								Frequently asked questions
+							</h2>
+							<>
+								<Accordion
+									className="mb-6"
+									open={open === 1}
+									icon={<Icon id={1} open={open} />}
+								>
+									<AccordionHeader
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										onClick={() => handleOpen(1)}
+									>
+										Why should I give?
+									</AccordionHeader>
+									<AccordionBody className="px-4 text-base font-noto">
+										We&apos;re not always in the position that we want to be at.
+										We&apos;re constantly growing. We&apos;re constantly making
+										mistakes. We&apos;re constantly trying to express ourselves
+										and actualize our dreams.
+									</AccordionBody>
+								</Accordion>
+								<Accordion
+									className="mb-6"
+									open={open === 2}
+									icon={<Icon id={2} open={open} />}
+								>
+									<AccordionHeader
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										onClick={() => handleOpen(2)}
+									>
+										Where does my money go when I give?
+									</AccordionHeader>
+									<AccordionBody className="px-4 text-base font-noto">
+										We&apos;re not always in the position that we want to be at.
+										We&apos;re constantly growing. We&apos;re constantly making
+										mistakes. We&apos;re constantly trying to express ourselves
+										and actualize our dreams.
+									</AccordionBody>
+								</Accordion>
+								<Accordion
+									className="mb-6"
+									open={open === 3}
+									icon={<Icon id={3} open={open} />}
+								>
+									<AccordionHeader
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										onClick={() => handleOpen(3)}
+									>
+										Why should I give 10% of my income as tithe?
+									</AccordionHeader>
+									<AccordionBody className="px-4 text-base font-noto">
+										We&apos;re not always in the position that we want to be at.
+										We&apos;re constantly growing. We&apos;re constantly making
+										mistakes. We&apos;re constantly trying to express ourselves
+										and actualize our dreams.
+									</AccordionBody>
+								</Accordion>
+								<Accordion
+									className="mb-6"
+									open={open === 4}
+									icon={<Icon id={4} open={open} />}
+								>
+									<AccordionHeader
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										onClick={() => handleOpen(4)}
+									>
+										What is difference between seeds, offering and tithe?
+									</AccordionHeader>
+									<AccordionBody className="px-4 text-base font-noto">
+										We&apos;re not always in the position that we want to be at.
+										We&apos;re constantly growing. We&apos;re constantly making
+										mistakes. We&apos;re constantly trying to express ourselves
+										and actualize our dreams.
+									</AccordionBody>
+								</Accordion>
+								<Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
+									<AccordionHeader
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										onClick={() => handleOpen(5)}
+									>
+										Who do I contact for help as regards payment?
+									</AccordionHeader>
+									<AccordionBody className="px-4 text-base font-noto">
+										We&apos;re not always in the position that we want to be at.
+										We&apos;re constantly growing. We&apos;re constantly making
+										mistakes. We&apos;re constantly trying to express ourselves
+										and actualize our dreams.
+									</AccordionBody>
+								</Accordion>
+							</>
 						</div>
 					</div>
 				</div>

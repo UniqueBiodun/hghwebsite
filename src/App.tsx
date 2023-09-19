@@ -9,6 +9,7 @@ import About from "./views/pages/about";
 import FirstTimer from "./views/pages/first-timer";
 import LetsPray from "./views/pages/lets-pray";
 import Give from "./views/pages/give";
+import Contact from "./views/pages/contact";
 
 function App({}) {
 	const [receivedData, setReceivedData] = useState("");
@@ -60,6 +61,7 @@ function App({}) {
 						<Route path="/first-timer" element={<FirstTimer />} />
 						<Route path="/pray" element={<LetsPray />} />
 						<Route path="/give" element={<Give />} />
+						<Route path="/contact" element={<Contact />} />
 					</Routes>
 
 					<Footer />

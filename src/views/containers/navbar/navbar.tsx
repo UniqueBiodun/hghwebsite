@@ -32,6 +32,8 @@ const Navbar: React.FC<NavbarProps> = ({
 			setColor(true);
 		} else if (location.pathname === "/give") {
 			setColor(true);
+		} else if (location.pathname === "/contact") {
+			setColor(true);
 		} else {
 			setColor(false);
 		}

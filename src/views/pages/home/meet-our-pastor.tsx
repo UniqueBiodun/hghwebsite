@@ -44,7 +44,7 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 			>
 				<div
 					ref={ref}
-					className="container mx-auto flex gap-4 md:gap-[38px] flex-col md:flex-row justify-center items-center"
+					className="container mx-auto flex gap-4 md:gap-[38px] flex-col lg:flex-row justify-center items-center"
 				>
 					<motion.div
 						initial={{ y: "-10vh", opacity: 0 }}

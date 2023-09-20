@@ -52,9 +52,13 @@ const GiveForm: React.FC = ({}) => {
 							<span className="bg-[#FDF4F7] text-[#530E25] font-medium text-base px-3 py-1 rounded-[40px]">
 								Give bountifully
 							</span>
-							<h2 className="text-[#151515] font-medium text-xl md:text-3xl pt-4">
+							<h2 className="text-[#151515] text-left md:text-center font-medium text-xl md:text-3xl py-4">
 								Offerings, seeds, tithes and donations
 							</h2>
+							<p className="text-lg text-[#2f2f2f] mx-auto w-[100%] lg:w-[70%] text-left md:text-center md:w-[80%] sm:w-[65%]">
+								To give is to honour the head of the church, Christ. So, put
+								your money where your love & faith is...
+							</p>
 							<div className="bg-[#FDFDFD] border rounded border-[#E1E5EA] text-left flex flex-col gap-8 py-4 px-6 my-10">
 								<p className="text-lg md:text-xl text-sec-300 font-medium">
 									Bank Transfer (Naira)

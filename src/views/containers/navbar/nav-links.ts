@@ -36,7 +36,7 @@ export const navlinks = [
 	},
 	{
 		title: "HGH-i",
-		link: "",
+		link: "/hgh-i",
 		target: "",
 	},
 ];

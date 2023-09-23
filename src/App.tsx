@@ -10,6 +10,7 @@ import FirstTimer from "./views/pages/first-timer";
 import LetsPray from "./views/pages/lets-pray";
 import Give from "./views/pages/give";
 import Contact from "./views/pages/contact";
+import HGHI from "./views/pages/hgh-i";
 
 function App({}) {
 	const [receivedData, setReceivedData] = useState("");
@@ -21,7 +22,7 @@ function App({}) {
 	};
 
 	const toggleSidebar = () => {
-		console.log(receivedData);
+		// console.log(receivedData);
 		setIsOpen(!isOpen);
 	};
 
@@ -62,6 +63,8 @@ function App({}) {
 						<Route path="/pray" element={<LetsPray />} />
 						<Route path="/give" element={<Give />} />
 						<Route path="/contact" element={<Contact />} />
+						<Route path="/hgh-i" element={<HGHI />} />
+						<Route path="*" element={<Home />} />
 					</Routes>
 
 					<Footer />

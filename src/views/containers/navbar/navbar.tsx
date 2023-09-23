@@ -34,13 +34,15 @@ const Navbar: React.FC<NavbarProps> = ({
 			setColor(true);
 		} else if (location.pathname === "/contact") {
 			setColor(true);
+		} else if (location.pathname === "/hgh-i") {
+			setColor(true);
 		} else {
 			setColor(false);
 		}
 	};
 
 	const sendAndToggle = () => {
-		sendDataToParent("Sidebar");
+		sendDataToParent("");
 		toggleSidebar();
 	};
 

@@ -33,7 +33,6 @@ const FirstTimerForm: React.FC = () => {
 					preferredtime,
 				}
 			);
-			console.log("Response:", response.data);
 			alert(response?.data.message);
 			// Clear form fields after successful submission
 			setFullname("");

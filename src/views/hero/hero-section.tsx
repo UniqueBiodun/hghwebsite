@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 	};
 
 	return (
-		<div className="relative h-screen font-noto">
+		<div className="relative h-screen font-noto text-center">
 			<video
 				autoPlay
 				muted
@@ -26,15 +26,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 				className="w-full h-screen object-cover object-center absolute"
 			>
 				<source
-					src="https://res.cloudinary.com/ddypwf3iu/video/upload/v1691609928/HGH%20Website%20Assets/Videos/5_Second_Countdown_Intro_video_YouTube_j1l5io.mp4"
+					src="https://res.cloudinary.com/ddypwf3iu/video/upload/v1695723162/HGH%20Website%20Assets/Videos/Hero_section_video_-_480p_ymnwbb.mov"
+					// src="https://res.cloudinary.com/ddypwf3iu/video/upload/v1691609928/HGH%20Website%20Assets/Videos/5_Second_Countdown_Intro_video_YouTube_j1l5io.mp4"
 					type="video/mp4"
 				/>
 			</video>
 			<div className="relative container text-black p-4 text-left md:text-center flex flex-col items-center justify-center h-full">
-				<h1 className="text-3xl md:text-5xl uppercase text-center md:text-[64px] w-[100%] sm:w-[80%] lg:w-[55%] font-bold mb-4">
+				<h1 className="text-[#fff] text-3xl md:text-4xl lg:leading-[70px] lg:text-[64px] uppercase text-center w-[100%] sm:w-[65%] md:w-[65%] lg:w-[75%] xl:w-[68%] 2xl:w-[55%] font-bold mb-4">
 					Welcome to the home of peace
 				</h1>
-				<p className="text-lg md:text-2xl w-[100%] lg:w-[55%] text-center md:w-[80%] sm:w-[65%] animate-pulse">
+				<p className="text-[#fff] text-lg md:text-2xl w-[100%] lg:w-[55%] text-center md:w-[80%] sm:w-[65%] animate-pulse">
 					We are a close-knit family of young and vibrant individuals bonded by
 					the Spirit of love as the centre of the house. We are passionate about
 					God and we’re held up by the pillars of the Spirit, Love, Peace, Grace
@@ -43,7 +44,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 				<Button
 					onClick={scrollToNextSectionWithDelay}
 					variant="outlined"
-					className="normal-case font-noto shadow-none w-[80%] sm:w-[40%] md:w-[40%] lg:w-[25%] xl:w-[20%] px-2 text-base md:text-xl font-medium mt-12 outline-0 border-black"
+					className="text-[#fff] normal-case font-noto shadow-none w-[65%] sm:w-[40%] md:w-[40%] lg:w-[25%] xl:w-[25%] 2xl:w-[18%] px-2 text-base md:text-xl font-medium mt-12 outline-0 border-[#fff]"
 				>
 					Come journey with us
 				</Button>

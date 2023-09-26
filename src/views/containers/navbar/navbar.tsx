@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import HGHLOGO from "../../../assets/icons/hghburglogo.svg";
+// import HGHLOGO from "../../../assets/icons/hghburglogo.svg";
 import HGHLOGOWhite from "../../../assets/icons/hghwhitelogo.svg";
-import Menu from "../../../assets/icons/menu-burg.svg";
+// import Menu from "../../../assets/icons/menu-burg.svg";
 import MenuWhite from "../../../assets/icons/menu-white.svg";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { IconButton } from "@material-tailwind/react";
@@ -76,7 +76,7 @@ const Navbar: React.FC<NavbarProps> = ({
 							{color ? (
 								<img src={HGHLOGOWhite} alt="hgh-logo" />
 							) : (
-								<img src={HGHLOGO} alt="hgh-logo" />
+								<img src={HGHLOGOWhite} alt="hgh-logo" />
 							)}
 						</Link>
 					</div>
@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({
 						{color ? (
 							<img src={MenuWhite} alt="menu-icon" />
 						) : (
-							<img src={Menu} alt="menu-icon" />
+							<img src={MenuWhite} alt="menu-icon" />
 						)}
 					</div>
 				</nav>

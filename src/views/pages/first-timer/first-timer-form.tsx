@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import CustomAlert from "../../../components/message-alert";
 
 const FirstTimerForm: React.FC = () => {
 	const [fullname, setFullname] = useState("");
@@ -13,6 +14,7 @@ const FirstTimerForm: React.FC = () => {
 	const [referral, setReferral] = useState("");
 	const [preferredtime, setPreferredtime] = useState("");
 	const [isLoading, setIsLoading] = React.useState<boolean>(false);
+	const [success, setSuccess] = useState<string | null>(null);
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -33,7 +35,8 @@ const FirstTimerForm: React.FC = () => {
 					preferredtime,
 				}
 			);
-			alert(response?.data.message);
+			setSuccess(response?.data.message);
+
 			// Clear form fields after successful submission
 			setFullname("");
 			setEmail("");
@@ -46,6 +49,11 @@ const FirstTimerForm: React.FC = () => {
 			setReferral("");
 			setPreferredtime("");
 			setIsLoading(false);
+
+			// Clear the success message after 5 seconds
+			setTimeout(() => {
+				setSuccess(null);
+			}, 5000);
 		} catch (error) {
 			console.error("Error submitting form:", error);
 			setIsLoading(false);
@@ -227,6 +235,7 @@ const FirstTimerForm: React.FC = () => {
 								</form>
 							</div>
 						</div>
+						{success && <CustomAlert message={success} />}
 					</div>
 				</div>
 			</section>

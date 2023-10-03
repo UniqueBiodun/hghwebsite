@@ -7,8 +7,6 @@ const ContactMap: React.FC = () => {
 	const [email, setEmail] = useState("");
 	const [phone_number, setPhoneNumber] = useState("");
 	const [message, setMessage] = useState("");
-	const [schedulewithpastor, setSchedulewithpastor] = useState("");
-	const [preferredtime, setPreferredtime] = useState("");
 	const [isLoading, setIsLoading] = React.useState<boolean>(false);
 	const [success, setSuccess] = useState<string | null>(null);
 
@@ -23,8 +21,6 @@ const ContactMap: React.FC = () => {
 					email,
 					phone_number,
 					message,
-					schedulewithpastor,
-					preferredtime,
 				}
 			);
 			setSuccess(response?.data.message);
@@ -34,8 +30,6 @@ const ContactMap: React.FC = () => {
 			setEmail("");
 			setPhoneNumber("");
 			setMessage("");
-			setSchedulewithpastor("");
-			setPreferredtime("");
 			setIsLoading(false);
 
 			// Clear the success message after 5 seconds
@@ -54,7 +48,7 @@ const ContactMap: React.FC = () => {
 				<div className="container mx-auto">
 					<div className="w-full md:w-[90%] mx-auto">
 						<div className="py-10 text-center">
-							<span className="bg-[#F2EBEE] text-[#530E25] px-3 py-1 rounded-[40px]">
+							<span className="bg-[#F2EBEE] text-xs text-[#530E25] px-3 py-1 rounded-[40px]">
 								Reach us with ease
 							</span>
 							<h2 className="text-xl md:text-4xl py-4">Contact Us</h2>
@@ -107,37 +101,6 @@ const ContactMap: React.FC = () => {
 											onChange={(e) => setMessage(e.target.value)}
 											required
 										/>
-									</div>
-									<div className="mb-4 flex flex-col gap-6 md:flex-row justify-between">
-										<div className="w-full">
-											<select
-												className="bg-drop bg-[95%] appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#fdfdfd]"
-												onChange={(e) => setSchedulewithpastor(e.target.value)}
-												value={schedulewithpastor}
-											>
-												<option value="" disabled selected>
-													Would you like to schedule a call with our Pastor?
-												</option>
-												<option value="Yes">Yes</option>
-												<option value="No">No</option>
-											</select>
-										</div>
-										<div className="w-full">
-											<select
-												className="bg-drop bg-[95%] appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#fdfdfd]"
-												onChange={(e) => setPreferredtime(e.target.value)}
-												value={preferredtime}
-											>
-												<option value="" disabled selected>
-													Preferred time of call
-												</option>
-												<option value="Anytime">Anytime</option>
-												<option value="8am">8am - 12noon</option>
-												<option value="12noon">12noon - 3pm</option>
-												<option value="3pm">3pm - 6pm</option>
-												<option value="6pm">6pm - 8pm</option>
-											</select>
-										</div>
 									</div>
 
 									{isLoading ? (

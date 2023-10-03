@@ -45,7 +45,7 @@ const HGHI: React.FC = ({}) => {
 							Believer's Class
 						</h1>
 						<p className="text-sec-300 text-base md:text-xl">
-							Congratulations on being born again, Here, we’d teach you all you
+							Congratulations on being born again. Here, we’d teach you all you
 							need to know about being a believer and living the new life you
 							now have in Christ.
 						</p>
@@ -68,9 +68,8 @@ const HGHI: React.FC = ({}) => {
 							Membership Class
 						</h1>
 						<p className="text-sec-300 text-base md:text-xl">
-							Congratulations on being born again, Here, we’d teach you all you
-							need to know about being a believer and living the new life you
-							now have in Christ.
+							Now that you are a believer, wouldn’t it be great to be part of a
+							family that loves you? Get inducted into the HGH Family
 						</p>
 						<div className="pt-8">
 							<Button className="w-1/2 font-noto hover:opacity-90 bg-primary text-[#FEFDFF] text-xl font-medium text-center py-5 normal-case rounded">

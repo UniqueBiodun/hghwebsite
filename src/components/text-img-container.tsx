@@ -37,6 +37,7 @@ const TextImgContainer: React.FC<TextImgContainerProps> = ({
 										className="object-cover rounded h-full w-full"
 										src={`${imgLink1}`}
 										alt="someone-1"
+										loading="lazy"
 									/>
 								</div>
 								<div className="h-2/3">
@@ -44,6 +45,7 @@ const TextImgContainer: React.FC<TextImgContainerProps> = ({
 										className="object-cover rounded h-full w-full"
 										src={`${imgLink2}`}
 										alt="someone-2"
+										loading="lazy"
 									/>
 								</div>
 							</div>
@@ -52,6 +54,7 @@ const TextImgContainer: React.FC<TextImgContainerProps> = ({
 									className="object-cover rounded h-full w-full"
 									src={`${imgLink3}`}
 									alt="someone-3"
+									loading="lazy"
 								/>
 							</div>
 						</div>

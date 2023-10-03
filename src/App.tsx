@@ -22,14 +22,14 @@ function App({}) {
 	};
 
 	const toggleSidebar = () => {
-		// console.log(receivedData);
+		console.log(receivedData);
 		setIsOpen(!isOpen);
 	};
 
 	useEffect(() => {
 		const timeoutId = setTimeout(() => {
 			setIsLoading(false);
-		}, 4000);
+		}, 3800);
 
 		return () => {
 			clearTimeout(timeoutId); // Clear the timeout when the component unmounts

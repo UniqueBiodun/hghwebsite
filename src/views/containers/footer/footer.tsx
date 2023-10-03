@@ -21,14 +21,11 @@ const Footer: React.FC = () => {
 					</div>
 
 					<div className="flex flex-col gap-4">
-						<p>talktous@hisgreathouse.org</p>
+						<p>talktous@hisgreathouse.com</p>
 						<p>+2348137600645</p>
 					</div>
 					<div>
-						<p>
-							3/5 Emmanuel street, Elomaz hotel, Maryland, Ikeja, Lagos,
-							Nigeria.
-						</p>
+						<p>Elomaz Hotel, 3/5 Emmanuel street, Maryland, Lagos - Nigeria.</p>
 					</div>
 					{/* Socials */}
 					<div className="flex flex-row gap-7">

@@ -49,7 +49,7 @@ const GiveForm: React.FC = ({}) => {
 				<div className="container mx-auto">
 					<div className="w-full md:w-[60%] mx-auto md:px-6">
 						<div className="text-center">
-							<span className="bg-[#FDF4F7] text-[#530E25] font-medium text-base px-3 py-1 rounded-[40px]">
+							<span className="bg-[#FDF4F7] text-xs text-[#530E25] font-medium px-3 py-1 rounded-[40px]">
 								Give bountifully
 							</span>
 							<h2 className="text-[#151515] text-left md:text-center font-medium text-xl md:text-3xl py-4">

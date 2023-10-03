@@ -66,8 +66,8 @@ const FirstTimerForm: React.FC = () => {
 				<div className="container bg-[#f9f9f9] mx-auto">
 					<div className="w-full md:w-[90%] mx-auto">
 						<div className="py-10 text-center">
-							<span className="bg-[#F2EBEE] text-[#530E25] px-3 py-1 rounded-[40px]">
-								First timer form
+							<span className="bg-[#F2EBEE] text-[#530E25] text-xs px-3 py-1 rounded-[40px]">
+								First timers form
 							</span>
 							<h2 className="text-xl md:text-4xl py-4">Welcome home!</h2>
 							<p className="text-lg text-[#2f2f2f] mx-auto w-[100%] lg:w-[70%] text-center md:w-[80%] sm:w-[65%]">

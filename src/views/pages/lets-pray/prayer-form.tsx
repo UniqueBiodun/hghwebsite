@@ -55,7 +55,7 @@ const PrayerForm: React.FC = () => {
 				<div className="container  mx-auto">
 					<div className="w-full md:w-[90%] mx-auto">
 						<div className="pb-10 text-center">
-							<span className="bg-[#F2EBEE] text-base text-[#530E25] px-3 py-1 rounded-[40px]">
+							<span className="bg-[#F2EBEE] text-xs text-[#530E25] px-3 py-1 rounded-[40px]">
 								Prayer request form
 							</span>
 							<h2 className="text-xl md:text-4xl py-4 text-[#151515] font-semibold">

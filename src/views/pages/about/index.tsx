@@ -4,37 +4,37 @@ import TextImgContainer from "../../../components/text-img-container";
 const About: React.FC = ({}) => {
 	return (
 		<>
-			<div className="mt-[55px] h:[216px] md:h-[280px] md:mt-[75px] 3xl:container flex">
+			<div className="mt-[55px] h:[216px] md:h-[280px] md:mt-[75px] flex">
 				<div className="">
 					<img
-						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695838049/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/Compressed_4_bbanwk.jpg"
+						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713226/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare1_duhaoc.jpg"
 						alt="frame-2"
 						className="object-cover w-full h-full"
-						loading="lazy"
+						
 					/>
 				</div>
 				<div className="">
 					<img
-						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695837577/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/Compressed-2_yplc40.jpg"
+						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713220/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare7_ecsjs2.jpg"
 						alt="frame-1"
 						className="object-cover w-full h-full"
-						loading="lazy"
+						
 					/>
 				</div>
 				<div className="">
 					<img
-						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695837575/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/Compressed-1_eop9ef.jpg"
+						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713224/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare2_nux4m1.jpg"
 						alt="frame-4"
 						className="object-cover w-full h-full"
-						loading="lazy"
+						
 					/>
 				</div>
 				<div className="">
 					<img
-						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695838427/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/Compressed-5_ua8cxw.jpg"
+						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713224/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare3_d7epn1.jpg"
 						alt="frame-3"
 						className="object-cover w-full h-full"
-						loading="lazy"
+						
 					/>
 				</div>
 			</div>
@@ -58,11 +58,10 @@ const About: React.FC = ({}) => {
 						</p>
 					</div>
 				}
-				// https://res.cloudinary.com/ddypwf3iu/image/upload/v1695845347/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/IMG_2475_qlsx8c.jpg
 
-				imgLink1="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695846036/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/Who_we_are_dw1ke7.jpg"
-				imgLink2="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695838050/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/Compressed3_awlyne.jpg"
-				imgLink3="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695845350/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/IMG_1089_qknydu.jpg"
+				imgLink1="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713220/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare9_qum2yw.jpg"
+				imgLink2="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713222/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare5_xckvix.jpg"
+				imgLink3="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713221/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare6_e61dn2.jpg"
 			/>
 			<TextImgContainer
 				flexDirection="sm:flex-row-reverse flex-col"
@@ -89,9 +88,9 @@ const About: React.FC = ({}) => {
 						</p>
 					</div>
 				}
-				imgLink1="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695846538/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/GroupCmp_zjuzmc.jpg"
-				imgLink2="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695846530/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/BisolaCmp_lnilwv.jpg"
-				imgLink3="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695846529/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/DolaCmp_pegem9.jpg"
+				imgLink1="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713218/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare10_jhsbq8.jpg"
+				imgLink2="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713220/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare8_h51ous.jpg"
+				imgLink3="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695845347/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/IMG_2475_qlsx8c.jpg"
 			/>
 		</>
 	);

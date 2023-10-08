@@ -31,10 +31,10 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 							Love, <br /> Olufemi Ibitoye, <br /> Lead Pastor.
 						</p>
 					</div>
-					<div className="w-full relative bg-black">
+					<div className="w-full relative">
 						<img
-							className="rounded h-[224px] md:h-[424px] w-full object-contain"
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1695835752/HGH%20Website%20Assets/HGH%20Website%20Pictures/Welcome%20Address/IMG_7750_ppaue3.jpg"
+							className="rounded h-[224px] md:h-[424px] w-full object-cover"
+							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696707171/HGH%20Website%20Assets/HGH%20Website%20Pictures/Welcome%20Address/Pfem_2_hcuocm.jpg"
 							alt="lead-pastor"
 						/>
 					</div>

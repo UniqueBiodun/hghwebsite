@@ -55,12 +55,12 @@ const GiveForm: React.FC = ({}) => {
 							<h2 className="text-[#151515] text-left md:text-center font-medium text-xl md:text-3xl py-4">
 								Offerings, seeds, tithes and donations
 							</h2>
-							<p className="text-lg text-[#2f2f2f] mx-auto w-[100%] lg:w-[70%] text-left md:text-center md:w-[80%] sm:w-[65%]">
+							<p className="text-base text-[#2f2f2f] mx-auto w-[100%] lg:w-[70%] text-left md:text-center md:w-[80%] sm:w-[65%]">
 								To give is to honour the head of the church, Christ. So, put
 								your money where your love & faith is...
 							</p>
 							<div className="bg-[#FDFDFD] border rounded border-[#E1E5EA] text-left flex flex-col gap-8 py-4 px-6 my-10">
-								<p className="text-lg md:text-xl text-sec-300 font-medium">
+								<p className="text-lg text-sec-300 font-medium">
 									Bank Transfer (Naira)
 								</p>
 								<div className="flex justify-between">
@@ -70,12 +70,12 @@ const GiveForm: React.FC = ({}) => {
 											src={GtbankLogo}
 											alt="gtbank-logo"
 										/>
-										<p className="text-base md:text-xl text-sec-300">
+										<p className="text-base md:text-lg text-sec-300">
 											0717873978
 										</p>
 									</div>
 									<div className="flex items-center gap-2 cursor-pointer hover:opacity-70">
-										<p className="text-base md:text-lg text-primary">
+										<p className="text-base text-primary">
 											{isCopied ? "Copied" : "Copy"}
 										</p>
 										<CopyToClipboard text="0717873978" onCopy={handleCopyClick}>
@@ -83,17 +83,17 @@ const GiveForm: React.FC = ({}) => {
 										</CopyToClipboard>
 									</div>
 								</div>
-								<p className="text-base md:text-xl text-sec-300">
+								<p className="text-base md:text-lg text-sec-300">
 									<span className="font-medium">Account Name:</span> God’s
 									Chamber Global/His Great House
 								</p>
-								<p className="text-base md:text-xl text-sec-300">
+								<p className="text-base md:text-lg text-sec-300">
 									<span className="font-medium">Narration:</span>{" "}
 									Seed/Tithe/Offering/Donation
 								</p>
 							</div>
 						</div>
-						<div className="pt-5 md:pt-10 pb-10 md:pb-20">
+						<div className="pt-10 md:pt-14 pb-10 md:pb-20">
 							<h2 className="text-[#151515] text-center font-medium text-xl md:text-3xl pb-12">
 								Frequently asked questions
 							</h2>
@@ -104,16 +104,13 @@ const GiveForm: React.FC = ({}) => {
 									icon={<Icon id={1} open={open} />}
 								>
 									<AccordionHeader
-										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg text-sec-300"
 										onClick={() => handleOpen(1)}
 									>
 										Why should I give?
 									</AccordionHeader>
 									<AccordionBody className="px-4 text-base font-noto">
-										We&apos;re not always in the position that we want to be at.
-										We&apos;re constantly growing. We&apos;re constantly making
-										mistakes. We&apos;re constantly trying to express ourselves
-										and actualize our dreams.
+									People give for diverse reasons, but the highest of all is because we demonstrate the love we have for God; as He has loved us first.
 									</AccordionBody>
 								</Accordion>
 								<Accordion
@@ -122,16 +119,13 @@ const GiveForm: React.FC = ({}) => {
 									icon={<Icon id={2} open={open} />}
 								>
 									<AccordionHeader
-										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg text-sec-300"
 										onClick={() => handleOpen(2)}
 									>
 										Where does my money go when I give?
 									</AccordionHeader>
 									<AccordionBody className="px-4 text-base font-noto">
-										We&apos;re not always in the position that we want to be at.
-										We&apos;re constantly growing. We&apos;re constantly making
-										mistakes. We&apos;re constantly trying to express ourselves
-										and actualize our dreams.
+									The money is used for supporting the needs of the church.
 									</AccordionBody>
 								</Accordion>
 								<Accordion
@@ -140,16 +134,13 @@ const GiveForm: React.FC = ({}) => {
 									icon={<Icon id={3} open={open} />}
 								>
 									<AccordionHeader
-										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg text-sec-300"
 										onClick={() => handleOpen(3)}
 									>
 										Why should I give 10% of my income as tithe?
 									</AccordionHeader>
 									<AccordionBody className="px-4 text-base font-noto">
-										We&apos;re not always in the position that we want to be at.
-										We&apos;re constantly growing. We&apos;re constantly making
-										mistakes. We&apos;re constantly trying to express ourselves
-										and actualize our dreams.
+									We give tithe as a sign of Honour. Just as Abraham gave tithe to Melchizedek the high priest of righteousness, and king of Salem (peace) as tribute, a symbol of Honour to the one whom you regard in very high esteem; for the lesser is blessed by the greater. (Gen.14:18-20, Hebrews. 7, Matthew. 6:21
 									</AccordionBody>
 								</Accordion>
 								<Accordion
@@ -158,30 +149,24 @@ const GiveForm: React.FC = ({}) => {
 									icon={<Icon id={4} open={open} />}
 								>
 									<AccordionHeader
-										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg text-sec-300"
 										onClick={() => handleOpen(4)}
 									>
 										What is difference between seeds, offering and tithe?
 									</AccordionHeader>
 									<AccordionBody className="px-4 text-base font-noto">
-										We&apos;re not always in the position that we want to be at.
-										We&apos;re constantly growing. We&apos;re constantly making
-										mistakes. We&apos;re constantly trying to express ourselves
-										and actualize our dreams.
+									The main differences between seeds, offerings, and tithes are their purpose, the amount given, and the theological or philosophical beliefs associated with them. Seeds are often linked to the expectation of receiving financial blessings, offerings are voluntary gifts given for various reasons, and tithes are typically a specific percentage of one's income given to support the church or religious organization.
 									</AccordionBody>
 								</Accordion>
 								<Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
 									<AccordionHeader
-										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg md:text-xl text-sec-300"
+										className="rounded border border-[#E1E5EA] px-4 font-medium font-noto text-lg text-sec-300"
 										onClick={() => handleOpen(5)}
 									>
 										Who do I contact for help as regards payment?
 									</AccordionHeader>
 									<AccordionBody className="px-4 text-base font-noto">
-										We&apos;re not always in the position that we want to be at.
-										We&apos;re constantly growing. We&apos;re constantly making
-										mistakes. We&apos;re constantly trying to express ourselves
-										and actualize our dreams.
+									Kindly reach out to the People & Administrative team <a className="underline text-blue-800" href="mailto:people@hisgreathouse.com">people@hisgreathouse.com</a>
 									</AccordionBody>
 								</Accordion>
 							</>

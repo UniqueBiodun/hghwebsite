@@ -5,7 +5,7 @@ const LetsPray: React.FC = ({}) => {
 	return (
 		<>
 			<div className="bg-white">
-				<div className="mt-[55px] h:[216px] md:h-[280px] md:mt-[75px] 3xl:container flex">
+				<div className="mt-[55px] h:[216px] md:h-[280px] md:mt-[75px] flex">
 					<div className="">
 						<img
 							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694737516/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/Pray1_c6hast.png"
@@ -15,7 +15,7 @@ const LetsPray: React.FC = ({}) => {
 					</div>
 					<div className="">
 						<img
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694737516/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/Pray2_ubgzrr.png"
+							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696717283/HGH%20Website%20Assets/HGH%20Website%20Pictures/Let%27s%20Pray/letspray1_nsjmkp.jpg"
 							alt="frame-2"
 							className="object-cover w-full h-full"
 						/>
@@ -29,7 +29,7 @@ const LetsPray: React.FC = ({}) => {
 					</div>
 					<div className="">
 						<img
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694737516/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/Pray4_awhccw.png"
+							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696717282/HGH%20Website%20Assets/HGH%20Website%20Pictures/Let%27s%20Pray/letspray2_ot1jbp.jpg"
 							alt="frame-4"
 							className="object-cover w-full h-full"
 						/>

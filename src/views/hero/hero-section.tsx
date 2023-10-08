@@ -19,7 +19,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 	};
 
 	return (
-		<div className="relative h-screen font-noto text-center">
+		<div className="relative h-screen font-noto text-center bg-preload bg-no-repeat bg-cover">
 			<>
 				<video
 					autoPlay
@@ -28,7 +28,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 					className="w-full h-screen object-cover object-center absolute"
 				>
 					<source
-						src="https://res.cloudinary.com/ddypwf3iu/video/upload/v1695723162/HGH%20Website%20Assets/Videos/Hero_section_video_-_480p_ymnwbb.mov"
+						src="https://res.cloudinary.com/ddypwf3iu/video/upload/v1696710479/HGH%20Website%20Assets/Videos/Hero_section_video_-_480p_ymnwbb_1_ljyv1c.mp4"
 						type="video/mp4"
 					/>
 				</video>

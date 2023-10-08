@@ -6,36 +6,37 @@ const HGHI: React.FC = ({}) => {
 	return (
 		<>
 			<div className="bg-white">
-				<div className="mt-[55px] h:[216px] md:h-[280px] md:mt-[75px] 3xl:container flex">
-					<div className="">
-						<img
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694737516/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/Pray1_c6hast.png"
-							alt="frame-1"
-							className="object-cover w-full h-full"
-						/>
-					</div>
-					<div className="">
-						<img
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694737516/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/Pray2_ubgzrr.png"
-							alt="frame-2"
-							className="object-cover w-full h-full"
-						/>
-					</div>
-					<div className="">
-						<img
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694737516/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/Pray3_mt72ci.png"
-							alt="frame-3"
-							className="object-cover w-full h-full"
-						/>
-					</div>
-					<div className="">
-						<img
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694737516/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/Pray4_awhccw.png"
-							alt="frame-4"
-							className="object-cover w-full h-full"
-						/>
-					</div>
+			<div className="mt-[55px] h:[216px] md:h-[280px] md:mt-[75px] flex">
+				<div className="">
+					<img
+						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696715272/HGH%20Website%20Assets/HGH%20Website%20Pictures/First%20Timer/firsttimer5_ups8wv.jpg"
+						alt="frame-1"
+						className="object-cover w-full h-full"
+					/>
 				</div>
+				<div className="">
+					<img
+						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713226/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare1_duhaoc.jpg"
+						alt="frame-2"
+						className="object-cover w-full h-full"
+					/>
+				</div>
+				<div className="">
+					<img
+						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713223/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare4_oeo2s2.jpg"
+						alt="frame-3"
+						className="object-cover w-full h-full"
+					/>
+				</div>
+				<div className="">
+					<img
+					src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696715902/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/firsttimer6_yfjsa9.jpg"
+						
+						alt="frame-4"
+						className="object-cover w-full h-full"
+					/>
+				</div>
+			</div>
 			</div>
 			<TextImgContainer
 				flexDirection="sm:flex-row flex-col"
@@ -56,7 +57,7 @@ const HGHI: React.FC = ({}) => {
 						</div>
 					</div>
 				}
-				imgLink1="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+				imgLink1="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696722080/HGH%20Website%20Assets/HGH%20Website%20Pictures/Contact/hghi3_qjrhsj.jpg"
 				imgLink2="https://images.unsplash.com/photo-1521178010706-baefe2334211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
 				imgLink3="https://images.unsplash.com/flagged/photo-1586105665546-29a815dbee34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJheWluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
 			/>
@@ -80,7 +81,7 @@ const HGHI: React.FC = ({}) => {
 				}
 				imgLink1="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
 				imgLink2="https://images.unsplash.com/photo-1521178010706-baefe2334211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-				imgLink3="https://images.unsplash.com/flagged/photo-1586105665546-29a815dbee34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJheWluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+				imgLink3="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696721649/HGH%20Website%20Assets/HGH%20Website%20Pictures/Contact/hghi1_qaza3x.jpg"
 			/>
 			<TextImgContainer
 				flexDirection="sm:flex-row flex-col"
@@ -103,7 +104,7 @@ const HGHI: React.FC = ({}) => {
 				}
 				imgLink1="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
 				imgLink2="https://images.unsplash.com/photo-1521178010706-baefe2334211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-				imgLink3="https://images.unsplash.com/flagged/photo-1586105665546-29a815dbee34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJheWluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+				imgLink3="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696721648/HGH%20Website%20Assets/HGH%20Website%20Pictures/Contact/hghi2_llbe9o.jpg"
 			/>
 		</>
 	);

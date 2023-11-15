@@ -12,6 +12,7 @@ module.exports = withMT({
 			xl: "1140px",
 			"2xl": "1440px",
 			"3xl": "1441px",
+			"4xl": "2000px",
 		},
 		extend: {
 			colors: {
@@ -44,7 +45,8 @@ module.exports = withMT({
 			lquote: "url('/src/assets/icons/left-quote.svg')",
 			rquote: "url('/src/assets/icons/right-quote.svg')",
 			drop: "url('/src/assets/icons/chevron_right.svg')",
-			preload: "url('/src/assets/images/preloadbg.png')",
+			preload: "url('/src/assets/images/preloadbg.JPG')",
+			mobile_preload: "url('/src/assets/images/HGHMobileBgPic.JPG')",
 			"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 		},
 	},

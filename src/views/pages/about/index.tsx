@@ -5,7 +5,7 @@ const About: React.FC = ({}) => {
 	return (
 		<>
 			<div className="mt-[55px] h:[216px] md:h-[280px] md:mt-[75px] flex">
-				<div className="">
+				<div className="w-full">
 					<img
 						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713226/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare1_duhaoc.jpg"
 						alt="frame-2"
@@ -13,7 +13,7 @@ const About: React.FC = ({}) => {
 						
 					/>
 				</div>
-				<div className="">
+				<div className="w-full">
 					<img
 						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713220/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare7_ecsjs2.jpg"
 						alt="frame-1"
@@ -21,7 +21,7 @@ const About: React.FC = ({}) => {
 						
 					/>
 				</div>
-				<div className="">
+				<div className="w-full">
 					<img
 						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713224/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare2_nux4m1.jpg"
 						alt="frame-4"
@@ -29,7 +29,7 @@ const About: React.FC = ({}) => {
 						
 					/>
 				</div>
-				<div className="">
+				<div className="w-full">
 					<img
 						src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696713224/HGH%20Website%20Assets/HGH%20Website%20Pictures/Who%20We%20Are/whoweare3_d7epn1.jpg"
 						alt="frame-3"
@@ -67,7 +67,7 @@ const About: React.FC = ({}) => {
 				flexDirection="sm:flex-row-reverse flex-col"
 				sectionContent={
 					<div>
-						<h1 className="text-sec-400 text-xl md:text-2xl font-semibold pb-4">
+						<h1 className="text-sec-400 text-xl md:text-2xl font-semibold pb-4 4xl:container">
 							Our Vision
 						</h1>
 						<p className="text-sec-300 pb-10 text-base md:text-xl">

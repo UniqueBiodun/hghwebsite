@@ -34,7 +34,7 @@ const EventsGallery: React.FC = () => {
 		<>
 			<section className="bg-[#f9f9f9] min-h-[calc(100vh-300px)] text-sec-200 pt-10 pb-[80px] font-noto">
 				<div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4">
-					<div className="w-full h-[244px] md:h-[560px] relative rounded border-2 bg-blue-gray-500">
+					<div className="w-full h-[244px] md:h-[560px] relative rounded border-2 overflow-hidden">
 						<div className="w-full rounded-b-[4px] text-center text-white text-base md:text-xl py-[14px] absolute bottom-0 right-0 left-0 bg-primary">
 							<p>Upcoming events</p>
 						</div>
@@ -137,8 +137,8 @@ const EventsGallery: React.FC = () => {
 								<img
 									key={i}
 									src={evt.imageLink}
-									alt="image 1"
-									className="rounded h-[244px] md:h-[560px] w-full object-cover"
+									alt="event-1"
+									className="w-full object-cover h-[90%]"
 								/>
 							))}
 						</Carousel>
@@ -153,8 +153,8 @@ const EventsGallery: React.FC = () => {
 									className="flex gap-2 justify-center items-center"
 								>
 									<img src={Headset} alt="headset" />
-									<span className="underline text-base md:text-xl font-medium">
-										Catch up on our messages
+									<span className="underline text-base md:text-lg font-normal">
+										Grow in the word
 									</span>
 								</Link>
 							</div>
@@ -174,8 +174,8 @@ const EventsGallery: React.FC = () => {
 									className="flex gap-2 justify-center items-center"
 								>
 									<img src={Headset} alt="headset" />
-									<span className="underline text-base md:text-xl font-medium">
-										Catch up on our messages
+									<span className="underline text-base md:text-lg font-normal">
+										Listen now
 									</span>
 								</Link>
 							</div>

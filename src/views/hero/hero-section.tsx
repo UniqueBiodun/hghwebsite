@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../animations.css";
 import { Button } from "@material-tailwind/react";
 
@@ -7,6 +7,8 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
+	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 640);
+
 	const scrollToNextSectionWithDelay = () => {
 		if (scrollRef.current) {
 			setTimeout(() => {
@@ -18,8 +20,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 		}
 	};
 
+	useEffect(() => {
+		const handleResize = () => {
+			setIsSmallScreen(window.innerWidth < 640);
+		};
+
+		// Attach the event listener
+		window.addEventListener("resize", handleResize);
+
+		// Remove the event listener on component unmount
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []); // Empty dependency array to run the effect only once
+
 	return (
-		<div className="relative h-screen font-noto text-center bg-preload bg-no-repeat bg-cover">
+		<div className="relative h-screen font-noto text-center bg-mobile_preload sm:bg-preload bg-no-repeat bg-cover">
 			<>
 				<video
 					autoPlay
@@ -28,7 +44,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 					className="w-full h-screen object-cover object-center absolute"
 				>
 					<source
-						src="https://res.cloudinary.com/ddypwf3iu/video/upload/v1696710479/HGH%20Website%20Assets/Videos/Hero_section_video_-_480p_ymnwbb_1_ljyv1c.mp4"
+						src={
+							isSmallScreen
+								? `https://res.cloudinary.com/ddypwf3iu/video/upload/v1700031948/HGH%20Website%20Assets/Videos/HGHBgMobileVid_jdsyvz.mov`
+								: `https://res.cloudinary.com/ddypwf3iu/video/upload/v1700031305/HGH%20Website%20Assets/Videos/pyy7nxogfq2xfawhicfk.mov`
+						}
 						type="video/mp4"
 					/>
 				</video>
@@ -36,7 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollRef }) => {
 					<h1 className="text-[#fff] text-3xl md:text-4xl lg:leading-[70px] lg:text-[64px] uppercase text-center w-[100%] sm:w-[65%] md:w-[65%] lg:w-[75%] xl:w-[68%] 2xl:w-[55%] font-bold mb-4">
 						Welcome to the home of peace
 					</h1>
-					<p className="text-[#fff] text-lg md:text-2xl w-[100%] lg:w-[55%] text-center md:w-[80%] sm:w-[65%] animate-pulse">
+					<p className="text-[#fff] text-lg md:text-xl w-[100%] lg:w-[55%] text-center md:w-[80%] sm:w-[65%]">
 						We are a close-knit family of young and vibrant individuals bonded
 						by the Spirit of love as the centre of the house. We are passionate
 						about God and we’re held up by the pillars of the Spirit, Love,

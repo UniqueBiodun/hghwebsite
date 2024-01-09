@@ -13,6 +13,7 @@ const FirstTimerForm: React.FC = () => {
 	const [location, setLocation] = useState("");
 	const [referral, setReferral] = useState("");
 	const [preferredtime, setPreferredtime] = useState("");
+	const [otherReferral, setOtherReferral] = useState("");
 	const [isLoading, setIsLoading] = React.useState<boolean>(false);
 	const [success, setSuccess] = useState<string | null>(null);
 
@@ -31,7 +32,8 @@ const FirstTimerForm: React.FC = () => {
 					address,
 					location,
 					date,
-					referral,
+					referral: referral === "others" ? otherReferral : referral,
+					// referral,
 					preferredtime,
 				}
 			);
@@ -47,6 +49,7 @@ const FirstTimerForm: React.FC = () => {
 			setLocation("");
 			setDate("");
 			setReferral("");
+			setOtherReferral("");
 			setPreferredtime("");
 			setIsLoading(false);
 
@@ -129,7 +132,11 @@ const FirstTimerForm: React.FC = () => {
 												onChange={(e) => setGender(e.target.value)}
 												value={gender}
 											>
-												<option value="" disabled selected>
+												<option
+													value=""
+													disabled
+													selected
+												>
 													Gender
 												</option>
 												<option value="male">Male</option>
@@ -175,20 +182,41 @@ const FirstTimerForm: React.FC = () => {
 												onChange={(e) => setReferral(e.target.value)}
 												value={referral}
 											>
-												<option value="" disabled selected>
+												<option
+													value=""
+													disabled
+													selected
+												>
 													How did you hear about us?
 												</option>
-												<option value="Yes">Yes</option>
-												<option value="No">No</option>
+												<option value="social_media">Social Media</option>
+												<option value="evangelism">Evangelism</option>
+												<option value="family_friend">Family/Friend</option>
+												<option value="others">Others</option>
 											</select>
+											{/* Display input field for custom referral if "Others" is selected */}
+											{referral === "others" && (
+												<input
+													type="text"
+													className="bg-[95%] appearance-none bg-transparent w-full px-6 py-4 text-[#2f2f2f] text-base md:text-lg border-b-2 focus:outline-none border-[#EBEBEB] bg-[#fdfdfd] mt-2"
+													placeholder="Tell us how you heard about us"
+													value={otherReferral}
+													onChange={(e) => setOtherReferral(e.target.value)}
+												/>
+											)}
 										</div>
+
 										<div className="w-full">
 											<select
 												className="bg-drop bg-[95%] appearance-none bg-transparent bg-no-repeat w-full px-6 py-4 text-[#2f2f2f] text-base md:text-lg rounded border border-[#EBEBEB] bg-[#fdfdfd]"
 												onChange={(e) => setPreferredtime(e.target.value)}
 												value={preferredtime}
 											>
-												<option value="" disabled selected>
+												<option
+													value=""
+													disabled
+													selected
+												>
 													Preferred time of call
 												</option>
 												<option value="anytime">Anytime</option>

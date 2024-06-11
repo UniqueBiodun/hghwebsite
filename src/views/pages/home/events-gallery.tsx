@@ -8,6 +8,7 @@ interface EventProps {
 	start_date?: string;
 	end_date?: string;
 	imageLink?: string;
+	event_type?: string;
 }
 
 const EventsGallery: React.FC = () => {
@@ -20,8 +21,6 @@ const EventsGallery: React.FC = () => {
 					"https://admin.hisgreathouse.org/api/events"
 				);
 				setEvents(response?.data);
-				console.log("Events", events);
-				console.log("Response", response?.data);
 			} catch (error) {
 				console.error("Error fetching events:", error);
 			}
@@ -29,6 +28,14 @@ const EventsGallery: React.FC = () => {
 
 		fetchEvents();
 	}, []);
+
+	const eventsFiltered = events.filter((event) => event.event_type === "event");
+	const bibleStudyFiltered = events.filter(
+		(event) => event.event_type === "bible_study"
+	);
+	const sundayServiceFiltered = events.filter(
+		(event) => event.event_type === "sunday_service"
+	);
 
 	return (
 		<>
@@ -133,11 +140,11 @@ const EventsGallery: React.FC = () => {
 								</div>
 							)}
 						>
-							{events.map((evt: any, i: number) => (
+							{eventsFiltered.map((evt: EventProps, i: number) => (
 								<img
 									key={i}
 									src={evt.imageLink}
-									alt="event-1"
+									alt="all-event"
 									className="w-full object-cover h-[90%]"
 								/>
 							))}
@@ -159,11 +166,19 @@ const EventsGallery: React.FC = () => {
 								</Link>
 							</div>
 						</div>
-						<img
-							className="rounded h-[244px] md:h-[560px] w-full object-cover"
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694701110/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/DeeperInTheWord_iz89ff.png"
-							alt="messages"
-						/>
+						{bibleStudyFiltered.length > 0 ? (
+							<img
+								className="rounded h-[244px] md:h-[560px] w-full object-cover"
+								src={bibleStudyFiltered[0].imageLink}
+								alt="bible-study"
+							/>
+						) : (
+							<img
+								className="rounded h-[244px] md:h-[560px] w-full object-cover"
+								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694701110/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/DeeperInTheWord_iz89ff.png"
+								alt="bible-study-placeholder"
+							/>
+						)}
 					</div>
 					<div className="w-full relative">
 						<div className="w-full rounded-b-[4px] text-center text-white text-base md:text-xl py-[14px] absolute bottom-0 right-0 left-0 bg-primary">
@@ -180,11 +195,19 @@ const EventsGallery: React.FC = () => {
 								</Link>
 							</div>
 						</div>
-						<img
-							className="rounded h-[244px] md:h-[560px] w-full object-cover"
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694701110/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/FaithSeminar_cahwf6.png"
-							alt="deeper-in-the-word"
-						/>
+						{sundayServiceFiltered.length > 0 ? (
+							<img
+								className="rounded h-[244px] md:h-[560px] w-full object-cover"
+								src={sundayServiceFiltered[0].imageLink}
+								alt="sunday-service"
+							/>
+						) : (
+							<img
+								className="rounded h-[244px] md:h-[560px] w-full object-cover"
+								src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1694701110/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/FaithSeminar_cahwf6.png"
+								alt="sunday-service-placeholder"
+							/>
+						)}
 					</div>
 				</div>
 			</section>

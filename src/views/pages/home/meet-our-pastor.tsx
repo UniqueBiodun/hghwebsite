@@ -1,4 +1,5 @@
 import React from "react";
+import { PfemImgLink } from "../../../helper/Variables";
 
 interface MeetOurPastorProps {
 	refProp: React.RefObject<HTMLDivElement>;
@@ -34,7 +35,7 @@ const MeetOurPastor: React.FC<MeetOurPastorProps> = ({ refProp }) => {
 					<div className="w-full relative">
 						<img
 							className="rounded h-[224px] md:h-[424px] w-full object-cover"
-							src="https://res.cloudinary.com/ddypwf3iu/image/upload/v1696707171/HGH%20Website%20Assets/HGH%20Website%20Pictures/Welcome%20Address/Pfem_2_hcuocm.jpg"
+							src={PfemImgLink}
 							alt="lead-pastor"
 						/>
 					</div>

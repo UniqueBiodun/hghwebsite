@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import GtbankLogo from "../../../assets/icons/gtbank-logo.png";
+import FcmbLogo from "../../../assets/icons/fcmb-logo.png";
+// import GtbankLogo from "../../../assets/icons/gtbank-logo.png";
 import CopyIcon from "../../../assets/icons/copy-icon.svg";
 import {
 	Accordion,
@@ -67,12 +68,20 @@ const GiveForm: React.FC = ({}) => {
 									<div className="flex items-center gap-2">
 										<img
 											className="w-10 h-10 md:w-auto md:auto"
+											src={FcmbLogo}
+											alt="fcmb-logo"
+										/>
+										{/* <img
+											className="w-10 h-10 md:w-auto md:auto"
 											src={GtbankLogo}
 											alt="gtbank-logo"
-										/>
+										/> */}
 										<p className="text-base md:text-lg text-sec-300">
-											0717873978
+											1026912161
 										</p>
+										{/* <p className="text-base md:text-lg text-sec-300">
+											0717873978
+										</p> */}
 									</div>
 									<div className="flex items-center gap-2 cursor-pointer hover:opacity-70">
 										<p className="text-base text-primary">
@@ -84,9 +93,12 @@ const GiveForm: React.FC = ({}) => {
 									</div>
 								</div>
 								<p className="text-base md:text-lg text-sec-300">
+									<span className="font-medium">Account Name:</span> God’s Chamber Church (HGH)
+								</p>
+								{/* <p className="text-base md:text-lg text-sec-300">
 									<span className="font-medium">Account Name:</span> God’s
 									Chamber Global/His Great House
-								</p>
+								</p> */}
 								<p className="text-base md:text-lg text-sec-300">
 									<span className="font-medium">Narration:</span>{" "}
 									Seed/Tithe/Offering/Donation

@@ -45,7 +45,7 @@ const EventsGallery: React.FC = () => {
             <div className='w-full rounded-b-[4px] text-center text-white text-base md:text-xl py-[14px] absolute bottom-0 right-0 left-0 bg-primary'>
               <p>Upcoming events</p>
             </div>
-            <Carousel
+            {/* <Carousel
               autoplay
               autoplayDelay={5000}
               loop
@@ -148,6 +148,99 @@ const EventsGallery: React.FC = () => {
                   className='w-full object-cover h-[90%]'
                 />
               ))}
+            </Carousel> */}
+
+            <Carousel
+              autoplay
+              autoplayDelay={5000}
+              loop
+              transition={{ duration: 2, type: 'spring' }}
+              className='rounded-xl'
+              prevArrow={({ handlePrev }) => (
+                <IconButton
+                  variant='text'
+                  color='white'
+                  size='lg'
+                  onClick={handlePrev}
+                  className='!absolute bottom-1 left-4'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='40'
+                    height='41'
+                    viewBox='0 0 40 41'
+                    fill='none'
+                  >
+                    <mask
+                      id='mask0_601_2403'
+                      maskUnits='userSpaceOnUse'
+                      x='0'
+                      y='0'
+                      width='40'
+                      height='41'
+                    >
+                      <rect
+                        x='40'
+                        y='40.5'
+                        width='40'
+                        height='40'
+                        transform='rotate(-180 40 40.5)'
+                        fill='#D9D9D9'
+                      />
+                    </mask>
+                    <g mask='url(#mask0_601_2403)'>
+                      <path
+                        d='M19.0004 20.5L26.6671 28.1667L24.3338 30.5L14.3338 20.5L24.3338 10.5L26.6671 12.8333L19.0004 20.5Z'
+                        fill='white'
+                      />
+                    </g>
+                  </svg>
+                </IconButton>
+              )}
+              nextArrow={({ handleNext }) => (
+                <IconButton
+                  variant='text'
+                  color='white'
+                  size='lg'
+                  onClick={handleNext}
+                  className='!absolute bottom-1 !right-4'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='40'
+                    height='41'
+                    viewBox='0 0 40 41'
+                    fill='none'
+                  >
+                    <mask
+                      id='mask0_601_2400'
+                      maskUnits='userSpaceOnUse'
+                      x='0'
+                      y='0'
+                      width='40'
+                      height='41'
+                    >
+                      <rect y='0.5' width='40' height='40' fill='#D9D9D9' />
+                    </mask>
+                    <g mask='url(#mask0_601_2400)'>
+                      <path
+                        d='M20.9996 20.5L13.3329 12.8333L15.6662 10.5L25.6662 20.5L15.6662 30.5L13.3329 28.1667L20.9996 20.5Z'
+                        fill='white'
+                      />
+                    </g>
+                  </svg>
+                </IconButton>
+              )}
+              navigation={() => null}
+            >
+              {eventsFiltered.map((evt: EventProps, i: number) => (
+                <img
+                  key={i}
+                  src={evt.imageLink}
+                  alt='all-event'
+                  className='w-full object-cover h-[90%]'
+                />
+              ))}
             </Carousel>
           </div>
 
@@ -155,8 +248,7 @@ const EventsGallery: React.FC = () => {
             <div className='w-full rounded-b-[4px] text-center text-white text-base md:text-xl py-[14px] absolute bottom-0 right-0 left-0 bg-primary'>
               <div>
                 <Link
-                  target='_blank'
-                  to='https://t.me/hisgreathaven'
+                  to='/teachings'
                   className='flex gap-2 justify-center items-center'
                 >
                   <img src={Headset} alt='headset' />
@@ -184,8 +276,7 @@ const EventsGallery: React.FC = () => {
             <div className='w-full rounded-b-[4px] text-center text-white text-base md:text-xl py-[14px] absolute bottom-0 right-0 left-0 bg-primary'>
               <div>
                 <Link
-                  target='_blank'
-                  to='https://t.me/hisgreathaven'
+                  to='/teachings'
                   // to="https://mainstack.me/hisgreathouse"
                   className='flex gap-2 justify-center items-center'
                 >
@@ -205,7 +296,7 @@ const EventsGallery: React.FC = () => {
             ) : (
               <img
                 className='rounded h-[244px] md:h-[560px] w-full object-cover'
-                src='https://res.cloudinary.com/ddypwf3iu/image/upload/v1694701110/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/FaithSeminar_cahwf6.png'
+                src='https://res.cloudinary.com/ddypwf3iu/image/upload/v1736095653/HGH%20Website%20Assets/HGH%20Placeholder%20Pictures/2025_theme_tr9zmy.jpg'
                 alt='sunday-service-placeholder'
               />
             )}

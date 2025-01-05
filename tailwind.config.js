@@ -23,6 +23,7 @@ module.exports = withMT({
           200: '#787878',
           300: '#2F2F2F',
           400: '#151515',
+          500: '#434343',
         },
       },
     },
@@ -32,16 +33,28 @@ module.exports = withMT({
       noto: ['Noto Sans', 'sans-serif'],
     },
 
+    // container: {
+    //   padding: {
+    //     DEFAULT: '1rem',
+    //     sm: '2rem',
+    //     lg: '2rem',
+    //     xl: '2rem',
+    //     '2xl': '5rem',
+    //   },
+    //   center: true,
+    // },
+
     container: {
       padding: {
         DEFAULT: '1rem',
         sm: '2rem',
         lg: '2rem',
         xl: '2rem',
-        '2xl': '5rem',
+        '2xl': '2rem',
       },
       center: true,
     },
+
     backgroundImage: {
       lquote: "url('/src/assets/icons/left-quote.svg')",
       rquote: "url('/src/assets/icons/right-quote.svg')",

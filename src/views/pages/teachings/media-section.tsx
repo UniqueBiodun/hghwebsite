@@ -1,6 +1,6 @@
 import React from 'react';
 import AppleSocial from '../../../assets/icons/apple-social-logo.svg';
-import GoogleSocial from '../../../assets/icons/google-social-logo.svg';
+// import GoogleSocial from '../../../assets/icons/google-social-logo.svg';
 import MixlrSocial from '../../../assets/icons/mixlr-social-logo.svg';
 import SpotifySocial from '../../../assets/icons/spotify-social-logo.svg';
 import TelegramSocial from '../../../assets/icons/telegram-social-logo.svg';

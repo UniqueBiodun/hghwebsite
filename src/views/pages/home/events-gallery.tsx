@@ -18,7 +18,7 @@ const EventsGallery: React.FC = () => {
     const fetchEvents = async () => {
       try {
         const response = await axios.get<EventProps[]>(
-          'https://admin.hisgreathouse.org/api/events'
+          'https://admin.hisgreathaven.org/api/events'
         );
         setEvents(response?.data);
       } catch (error) {
@@ -277,7 +277,6 @@ const EventsGallery: React.FC = () => {
               <div>
                 <Link
                   to='/teachings'
-                  // to="https://mainstack.me/hisgreathouse"
                   className='flex gap-2 justify-center items-center'
                 >
                   <img src={Headset} alt='headset' />

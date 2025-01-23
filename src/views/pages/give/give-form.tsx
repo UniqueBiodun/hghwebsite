@@ -197,9 +197,9 @@ const GiveForm: React.FC = ({}) => {
                     Kindly reach out to the People & Administrative team{' '}
                     <a
                       className='underline text-blue-800'
-                      href='mailto:people@hisgreathouse.com'
+                      href='mailto:people@hisgreathaven.org'
                     >
-                      people@hisgreathouse.com
+                      people@hisgreathaven.org
                     </a>
                   </AccordionBody>
                 </Accordion>

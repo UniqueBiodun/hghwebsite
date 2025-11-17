@@ -16,6 +16,7 @@ const FirstTimerForm: React.FC = () => {
   const [otherReferral, setOtherReferral] = useState('');
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [success, setSuccess] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,6 +39,7 @@ const FirstTimerForm: React.FC = () => {
         }
       );
       setSuccess(response?.data.message);
+      setError(null); // Clear error if any
 
       // Clear form fields after successful submission
       setFullname('');
@@ -57,8 +59,23 @@ const FirstTimerForm: React.FC = () => {
       setTimeout(() => {
         setSuccess(null);
       }, 5000);
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch (err: any) {
+      console.error('Error submitting form:', err);
+      
+      // Handle server Axios error response safely
+      const errorMsg = err.response?.data?.message || err.response?.data?.error || 
+      "An unexpected error occurred. Please fill all fields and try again.";
+      
+      setError(
+        errorMsg
+      );
+
+      setSuccess(null); // Clear success if any
+      
+      // Clear the error message after 5 seconds
+      setTimeout(() => setError(null), 5000);
+      // setIsLoading(false);
+    } finally {
       setIsLoading(false);
     }
   };
@@ -251,7 +268,8 @@ const FirstTimerForm: React.FC = () => {
                 </form>
               </div>
             </div>
-            {success && <CustomAlert message={success} />}
+            {success && <CustomAlert type='success' message={success} />}
+            {error && <CustomAlert type="error" message={error} />}
           </div>
         </div>
       </section>

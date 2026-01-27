@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
               </Link>
             </span>
             <span>
-              <Link target='_blank' to='https://www.youtube.com/@hisgreathaven'>
+              <Link target='_blank' to='https://www.youtube.com/@hisgreathaven/playlists'>
                 <img src={Youtubelogo} alt='youtube-logo' />
               </Link>
             </span>

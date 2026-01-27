@@ -1,7 +1,7 @@
 import React from 'react';
 import AppleSocial from '../../../assets/icons/apple-social-logo.svg';
 // import GoogleSocial from '../../../assets/icons/google-social-logo.svg';
-import MixlrSocial from '../../../assets/icons/mixlr-social-logo.svg';
+// import MixlrSocial from '../../../assets/icons/mixlr-social-logo.svg';
 import SpotifySocial from '../../../assets/icons/spotify-social-logo.svg';
 import TelegramSocial from '../../../assets/icons/telegram-social-logo.svg';
 import YoutubeSocial from '../../../assets/icons/youtube-social-logo.svg';
@@ -64,7 +64,7 @@ const MediaSection: React.FC = ({}) => {
                   </div>
                 </div>
               </Link> */}
-              <Link to='https://www.youtube.com/@hisgreathaven'>
+              <Link to='https://www.youtube.com/@hisgreathaven/playlists'>
                 <div className='border border-[#E1E5EA] p-6 space-y-2 rounded hover:scale-105 hover:cursor-pointer'>
                   <div>
                     <img src={YoutubeSocial} alt='youtube-social' />
@@ -90,7 +90,7 @@ const MediaSection: React.FC = ({}) => {
                   </div>
                 </div>
               </Link>
-              <Link to='https://hisgreathouse.mixlr.com/'>
+              {/* <Link to='https://hisgreathouse.mixlr.com/'>
                 <div className='border border-[#E1E5EA] p-6 space-y-2 rounded hover:scale-105 hover:cursor-pointer'>
                   <div>
                     <img src={MixlrSocial} alt='mixlr-social' />
@@ -100,7 +100,7 @@ const MediaSection: React.FC = ({}) => {
                     <img src={ArrowForward} alt='arrow-forward' />
                   </div>
                 </div>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
